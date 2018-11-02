@@ -1,0 +1,89 @@
+<div class="main_content">
+    <div class="content">
+            <div class="head">
+                <div class="trade_detail_icon"></div>
+                <div class="page_title">交易明细</div>
+                <div class="page_select"><select id="p" onchange="choose()">
+             
+                    <option value="1" selected="selected">第01页</option>
+                
+                </select></div>
+            </div>
+            <div class="page_title_black_line"></div>
+<!-- START BLOCK : c2GetMatchBetInfoBlock -->  
+        <div class="tag_group">
+            <div class="tag tag_margin">
+                <div class="square_pic"></div>
+                <div class="tag_text">交易笔数：{i}&nbsp;笔
+                    <div class="tag_icon1"></div>
+                </div>
+            </div>
+            <div class="tag tag_margin">
+                <div class="square_pic"></div>
+                <div class="tag_text">金额总计：{totaldealmoney}
+                    <div class="tag_icon2"></div>
+                </div>
+            </div>
+            <div class="tag">
+                <div class="square_pic"></div>
+                <div class="tag_text">预估获利：{totalestimatedprofit}
+                    <div class="tag_icon3"></div>
+                
+                </div>
+            </div>
+        </div>
+ 
+        <div class="trade_detail_wrap">
+            <table class="trade_detail_head">
+                <tr>
+                    <td class="cell_1">单号</td>
+                    <td class="cell_2">交易时间</td>
+                    <td class="cell_3">开赛时间</td>
+                    <td class="cell_4">市场</td>
+                    <td class="cell_5">注单内容</td>
+                    <td class="cell_6">金额</td>
+                    <td class="cell_7">获利％</td>
+                    <td class="cell_8">预估获利</td>
+                </tr>
+            </table>
+            <table class="trade_detail_content">
+            <!-- START BLOCK : c2GetMatchBetInfodetailBlock -->
+                <tr>
+                    <td class="cell_1 middle">{betId}</td>
+                    <td class="cell_2">
+                        {createtime}
+                    </td>
+                    <td class="cell_3">
+                        {openDate}
+                    </td>
+                    <td class="cell_4">
+                        【{competition}】<br>
+                        {event}
+                    </td>
+                    <td class="cell_5 text_align_left padding_left">
+                        {market}{Fee}%<br>
+                        {selection}
+                    </td>
+                    <td class="cell_6 middle">&yen;{dealmoney}</td>
+                    <td class="cell_7 middle">{profit}%</td>
+                    <td class="cell_8 color_green middle">{estimatedprofit}</td>
+                </tr>
+            <!-- END BLOCK : c2GetMatchBetInfodetailBlock -->
+            <!-- START BLOCK : nonBlock -->
+                <tr>
+                    <td class="cell_1 middle">查无交易资料</td>
+                </tr>
+            <!-- END BLOCK : nonBlock -->
+            </table>
+            <table class="trade_detail_total">
+                <tr>
+                    <td class="total_cell1">总共&nbsp;{i}&nbsp;笔资料</td>
+                    <td class="total_cell2" >&nbsp;&nbsp;&nbsp;&yen;{totaldealmoney}</td>
+                    <td class="total_cell3 color_green" >&nbsp;&nbsp;{totalestimatedprofit}</td>
+                </tr>
+            </table>
+        </div>
+<!-- END BLOCK : c2GetMatchBetInfoBlock --> 
+    
+    </div>
+</div>

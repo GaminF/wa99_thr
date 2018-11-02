@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>register</title>
+    <link rel="stylesheet" href="interface/v2/css/reset.css">
+    <link rel="stylesheet" href="interface/v2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="interface/v2/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="interface/v2/css/mainStyle.css">
+    <script type="text/javascript" src="interface/v2/js/tgjs.js?v=18091917"></script>
+	<script type="text/javascript" src="interface/v2/js/v2.js"></script>
+
+</head>
+<body>
+<div class="register_content">
+    <div class="register_logo"></div>
+    <div class="page_title_black_line"></div>
+    <div class="join_title">
+        <div class="join_icon_group">
+            <div class="join_icon"></div>
+            <div class="join_text">加入会员</div>
+        </div>
+        <div class="dotted_line"></div>
+    </div>
+
+    <div class="step_title">步骤一. 快速注册</div>
+    <div>
+        <p>1.填写帐号与密码(<span>*</span>为必填栏位)</p>
+        <p>2.随机选择您喜欢的帐号后，填写昵称，输入帐号密码，提款密码(<span>提款密码将是您提款时重要依据)</span></p>
+    </div>
+    <div class="join_table">
+         <!-- START BLOCK : agentidBlock -->
+        <div id='agentidTab' class="join_row" >
+            <div class="join_cell cell_22 account">代理商：</div>
+            <div id="{agentid}" class="join_cell cell_23">{agentid}</div>
+            <input type="hidden" id="agentid" name="agentid" value='{agentid}'> 
+        </div>
+        <!-- END BLOCK : agentidBlock -->
+        <div class="join_row">
+            <div class="join_cell cell_22"><span>*</span>帐　号
+        </div>
+        <!-- START BLOCK : username_select_Block -->
+            <div id="option" class="join_cell cell_23"><select name="name" id="name" onChange="selectusername(this.value);" >
+                <option>请选择...</option>
+                <!-- START BLOCK : agentlistBlock -->
+                        <option value="{username}" {s}>{username}</option>
+                <!-- END BLOCK : agentlistBlock -->     
+            </select></div>
+        <!-- END BLOCK : username_select_Block -->
+            <!-- START BLOCK : SESSION_WEB2_MemIDBlock -->
+            <div class="join_cell cell_23" >{SESSION_WEB2_MemID}</div>
+			<input name="name" id="name" type="hidden" value="{SESSION_WEB2_MemID}">
+             <!-- END BLOCK : SESSION_WEB2_MemIDBlock -->
+            <div class="join_cell cell_24"><span>*</span>昵　　称　　：</div>
+            <div class="join_cell cell_25"><input name="nickname" id="nickname" class="text" type="text" placeholder="请输入..."></div>
+        </div>
+        <div class="join_row">
+            <div class="join_cell cell_22"><span>*</span>帐号密码：</div>
+            <div class="join_cell cell_23"><input name="loginPwd" id="loginPwd" class="text" type="password" placeholder="帐号密码请英数混合，至少６个字元"></div>
+            <div class="join_cell cell_24"><span>*</span>确认帐号密码：</div>
+            <div class="join_cell cell_25"><input name="loginPwd2" id="loginPwd2" class="text" type="password" placeholder="帐号密码请英数混合，至少６个字元"></div>
+        </div>
+        <div class="join_row">
+            <div class="join_cell cell_22"><span>*</span>提款密码：</div>
+            <div class="join_cell cell_23"><input name="receivePwd" id="receivePwd" class="text" type="password" placeholder="帐号密码请英数混合，至少６个字元"></div>
+            <div class="join_cell cell_24"><span>*</span>确认提款密码：</div>
+            <div class="join_cell cell_25"><input name="receivePwd2" id="receivePwd2" class="text" type="password" placeholder="帐号密码请英数混合，至少６个字元"></div>
+        </div>
+    </div>
+    <div>
+        <p>3.填写帐银行资料</p>
+        <p>4.安全性问题与答案请选择问题并输入您最熟悉的人、事、物，将可作为找回帐号密码之依据。</p>
+        <p>5.汇款户名请填写真实姓名作为提款使用，完成后既不能更改。</p>
+    </div>
+    <div class="join_table">
+        <div class="join_table2">
+            <div class="join_row">
+                <div class="join_cell cell_26 account2"><span>*</span>汇款户名：</div>
+                <div class="join_cell"><input id="realname" name="realname" type="text" placeholder="请填写真实姓名"></div>
+            </div>
+            <div class="join_row">
+                <div class="join_cell cell_26"><span>*</span>安全性问题：</div>
+                <div class="join_cell"><select name="question" id="question" >
+                    <option>请选择问题</option>
+                    <!-- START BLOCK : questionlistBlock -->
+                        <option value="{id}">{question}</option>
+                    <!-- END BLOCK : questionlistBlock -->      
+                </select></div>
+            </div>
+            <div class="join_row">
+                <div class="join_cell cell_26"><span>*</span>安全性答案：</div>
+                <div class="join_cell"><input id="ans" name="ans" type="text"></div>
+            </div>
+        </div>
+    </div>
+    <div class="step_title">步骤二.手机号码验证</div>
+    <div>
+        <p>1.填写手机号码，按送出验证码，填写手机简讯中的验证码。</p>
+        <p>2.手机验证码最多送出三次，超过三次仍无法收到简讯，请点击下方２４小时线上客服。</p>
+        <p>3.请于十分钟内完成输入手机验证码，或有申请疑问请联系线上客服，将有专员为您服务。</p>
+    </div>
+    <div class="join_table">
+        <div class="join_row">
+            <div class="join_cell cell_27"><span>*</span>手机号码：</div>
+            <div class="join_cell">
+                <select class="area" id="area" name="area" >
+                    <option value="">请选择区码</option>
+                    <!-- START BLOCK : GETCOUNTRYCODE -->
+                    <option value="{code}">{country}</option>
+                    <!-- END BLOCK : GETCOUNTRYCODE -->
+                    
+                </select>
+                <input class="phone" name="mobile" id="mobile" class="text" type="text" >
+                <button class="send_pwd" id='send_code' onclick="mobilecheck()">送出验证码</button>
+            </div>
+        </div>
+        <div class="join_row" id="cfCode">
+            <div class="join_cell cell_27 account3"><span>*</span>验证码：</div>
+            <div class="join_cell">
+                <input type="text" class="pwd" id="code4">
+                <button class="confirm_pwd" id="confirmCode" onclick="codecheck()">确认验证码</button>
+                <button class="resend_pwd" id="reSendCode" onclick="mobilecheck()">重新发送验证码</button>
+            </div>
+        </div>
+    </div>
+    <div class="bottom_part">
+        <input id=mobile_ans type="hidden">   
+        <button id="submitBT" onclick="register()">完成填写确认送出</button>
+        <div class="online24_group">
+            <div class="online24_text">
+                24H线上客服<br>
+                <span>24H ONLINE SERVICE</span>
+            </div>
+            <div class="online24_icon">
+                <div class="service_QQ" id="service_QQ" onclick="icon('QQ')"></div>  <!--QQ 按這裡-->
+                <div class="service_weixin" id="service_weixin" onclick="icon('WEI')"></div><!--微信按這裡-->
+                <div class="service_online" onclick="window.open('https://mdt.me0001.com/Web/im.aspx?_=t&accountid=101584&cp={hostUrl}')" target="_blank"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- INCLUDE BLOCK : Tips -->
+<div class="footer">
+    <div class="footer_container">
+        <div class="footer_black_line"></div>
+        <div>
+            <div class="sup_logo"></div>
+            <div class="footer_text">&copy; burgundy corporate tower,sen gil puyat ave makati city +63 945 129 9918
+            </div>
+        </div>
+    </div>
+</div>
+<script src="interface/v2/js/jquery-3.2.1.min.js"></script>
+<script src="interface/v2//js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/d9858d11e6.js"></script>
+<script src="interface/v2/js/register.js"></script>
+</body>
+</html>

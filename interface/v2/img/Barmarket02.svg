@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="463.2px" height="53.7px" viewBox="0 0 463.2 53.7" style="enable-background:new 0 0 463.2 53.7;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{opacity:0.2;fill:#002368;enable-background:new    ;}
+	.st2{opacity:0.15;fill:#4ECDF9;enable-background:new    ;}
+	.st3{opacity:0.2;fill:#E1FEFF;enable-background:new    ;}
+	.st4{opacity:0.25;fill:url(#SVGID_2_);enable-background:new    ;}
+</style>
+<g>
+	
+		<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="231.6" y1="1.4109" x2="231.6" y2="49.5045" gradientTransform="matrix(1 0 0 -1 0 56)">
+		<stop  offset="0" style="stop-color:#002368"/>
+		<stop  offset="0.2052" style="stop-color:#124889"/>
+		<stop  offset="0.4095" style="stop-color:#2065A3"/>
+		<stop  offset="0.6114" style="stop-color:#2A7AB5"/>
+		<stop  offset="0.8096" style="stop-color:#3087C0"/>
+		<stop  offset="1" style="stop-color:#328BC4"/>
+	</linearGradient>
+	<path class="st0" d="M463.2,53.7V5c0-2.8-2.3-5-5-5H5C2.2,0,0,2.3,0,5v48.7H463.2z"/>
+	<path class="st1" d="M463.2,41.2c-50.5,14.5-286,8.8-303.6,8.2C4.7,43.8,2.6,10.7,3.9,0.1C1.7,0.6,0,2.6,0,5v48.7h463.2V41.2z"/>
+	<path class="st2" d="M463.2,53.7V5c0-2.8-2.3-5-5-5H47.5c86.4,0,294.8,10.8,393.7,53.7H463.2z"/>
+	<path class="st3" d="M458.2,0H116.7c284.8,1.8,337.6,41.4,346.1,53.7c0.2-0.4,0.3-20.5,0.4-20.8V5C463.2,2.3,460.9,0,458.2,0z"/>
+	<path class="st3" d="M0,5v48.7C28.7,14.3,158.2,0.1,300,0H5C2.2,0,0,2.3,0,5z"/>
+	
+		<radialGradient id="SVGID_2_" cx="1313.1918" cy="1380.1316" r="8.0855" gradientTransform="matrix(25.2582 0 0 -3.236 -33180.4453 4495.6035)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<rect y="0.9" class="st4" width="170.6" height="51.8"/>
+</g>
+</svg>

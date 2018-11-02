@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=414,user-scalable=no">
+	<title>TG_Login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+	<link rel="stylesheet" href="./template/www/css/font-awesome.min.css">
+	<link rel="stylesheet" href="./template/www/css/normalize.css">
+	<link rel="stylesheet" href="./template/www/css/FIFA_login.css">
+	<script type="text/javascript" src="./template/www/js/tgservice.js"></script>
+</head>
+<script>
+	var _ABOUT_SAME_INFO = '{_ABOUT_SAME_INFO}';
+	var _JS_PASS_ERROR_LESS_6 = '{_JS_PASS_ERROR_LESS_6}';
+	var _JS_ERROR_FIVE = '{_JS_ERROR_FIVE}';
+	var _JS_ACCOUNT_LOCK = '{_JS_ACCOUNT_LOCK}';
+	var _JS_MANY_LOGIN = '{_JS_MANY_LOGIN}';
+	var _JS_SPEC_LOGIN_EVER_LOCK = '{_JS_SPEC_LOGIN_EVER_LOCK}';
+	var _JS_SPEC_LOGIN = '{_JS_SPEC_LOGIN}';
+	var _NOT_OPEN = '{_NOT_OPEN}';
+	var _JS_NONE_ACCOUNT = '{_JS_NONE_ACCOUNT}';
+</script>
+<body class="bg_img fifa_bg_img">
+	<div class="logo"></div>
+	<div class="login_content">
+		<div class="login_info">
+			<div class="input_style"><i class="fa fa-user-o input_icon"></i><input class="input_font" type="text" id="account" name="account" placeholder="帐号"></div>
+			<div class="input_style_lock"><i class="fa fa-lock input_icon"></i><input class="input_font_lock" type="password" id="pwd" name="pwd" placeholder="密码"></div>
+		</div>
+
+		<div class="switch_on_off">
+		<label class="switch">
+		<input type="checkbox" id="saveLogin" name="checbox_input">
+		<span class="slider round"></span>
+		</label>
+		</div>
+		
+		<div class="remember_acc_pwd">记住帐密</div>
+		<div class="btn_group">
+			<button class="register_btn" onclick="register('{_AGENT_USERNAME_}')">注册</button>
+			<button class="login_btn" onclick="checkuserform()">登入</button>
+		</div>
+
+	</div>
+
+	<div class="service_content">
+		<div class="service_24hr">24H 线上客服</div>
+		<!--<div class="service_24hr_icon">-->
+		<!--180624CLOSE<a href="https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&configID=1586&jid=5625358570&s=1" target="_blank">-->
+		<a href="#">
+		   <div class="online_icon" onclick="_MICHAT.floatClick();return false;"></div>
+		</a>
+		<a id="qq" href="#">
+			<div class="qq_icon"></div>
+		</a>
+		<a id="weixin" href="#">
+			<div class="weixin_icon"></div>
+		</a>
+		<!--</div>-->
+	</div>
+	<div class="select_lang">
+		<dl id="sample" class="dropdown">
+			<dt><a href="#"><span><img class="flag" src="./template/www/img/China-flag.png" alt=""/>简体中文</span></a></dt>
+			<dd>
+            <!--<ul>
+                <li><a href="login.php?langs=ch"><img class="flag" src="./template/www/img/China-flag.png" alt="" />簡体中文<span class="value">BR</span></a></li>
+                <li><a href="login.php?langs=tw"><img class="flag" src="./template/www/img/Hong-kong-flag.png" alt="" />繁體中文<span class="value">FR</span></a></li>
+                <li><a href="login.php?langs=en"><img class="flag" src="./template/www/img/United-kingdom-flag.png" alt="" />English<span class="value">DE</span></a></li>
+            
+            </ul>-->
+			</dd>
+		</dl>
+	</div>
+
+	<div id="Modal_cover" class="cover">
+		<div id="order1" class="order_content">
+			<div class="qq_title">淘金网客服 QQ扫一扫</div>
+			<div class="close_x"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div class="blue_line"></div>
+			<div class="QRcode">
+			<img src="./serviceQRCode/{_QQ_}" width=100% height=100%>	
+			</div>
+			<button class="close_btn">关闭</button>
+		</div>
+	</div>
+	<div id="Modal_cover2" class="cover">
+		<div id="order2" class="order_content2">
+			<div class="weixin_title">淘金网客服 微信扫一扫</div>
+			<div class="close_x"><i class="fa fa-times" aria-hidden="true"></i></div>
+			<div class="blue_line"></div>
+			<div class="QRcode">
+			<img src="./serviceQRCode/{_WEI_}">	
+			</div>
+			<button class="close_btn">关闭</button>
+		</div>
+	</div>
+
+	<script src="./template/www/js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="./template/www/js/jquery.cookie.js" ></script>
+	<script src="./template/www/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="./template/www/js/bootstrap-select.min.js"></script>
+	<script src="https://use.fontawesome.com/d9858d11e6.js"></script>
+	<script src="./template/www/js/modernizr.custom.04022.js"></script>
+	<script src="./template/www/js/sidy.js"></script>
+	<script src="./template/www/js/fifa_login.js"></script>
+</body>
+</html>

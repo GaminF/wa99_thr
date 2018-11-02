@@ -1,0 +1,50 @@
+<div class="main_content">
+    <div class="content">
+            <div class="head">
+                <div class="game_result_icon"></div>
+                <div class="page_title">赛事结果</div>
+             
+               
+                <div class="date_select"><select id="day" onchange="choosedate(this.value)">
+
+                <!-- START BLOCK : gameHistoryDetailTitleBlock -->
+                    <option value="{datetime}"  {s}>{dayshow}星期{w}</option>
+                <!-- END BLOCK : gameHistoryDetailTitleBlock -->    
+                </select></div>
+                
+            </div>
+            <div class="page_title_black_line"></div>
+
+
+        <div class="game_result_wrap">
+            <table class="game_result_head">
+                <tr>
+                    <td class="cell_14">开赛时间</td>
+                  <!--  <td class="cell_14">完赛时间</td>-->
+                    <td class="cell_15">赛事</td>
+                    <td class="cell_16">波胆</td>
+                    <td class="cell_17">上半场波胆</td>
+                    <td class="cell_18">总得分</td>
+                    <td class="cell_19">首入球时间</td>
+                </tr>
+            </table>
+            <table class="game_result_content">
+            <!-- START BLOCK : gameHistoryDetailcontentBlock--> 
+                <tr>
+                    <td class="cell_14">{opendate}<br>{opentime}</td>
+                    <!--  <td class="cell_14">{timestamp_date}<br>{timestamp_time}</td>-->
+                    <td class="cell_15">
+                        【{competition}】<br>
+                        {host}(主) vs {guest}</td>
+                    <td class="cell_16">{correctScore}</td>
+                    <td class="cell_17">{halfTimeScore}</td>
+                    <td class="cell_18">{totalscore}</td>
+                    <td class="cell_19">{timeName}</td>
+
+                </tr>
+            <!-- END BLOCK : gameHistoryDetailcontentBlock-->     
+            </table>
+
+        </div>
+    </div>
+</div>

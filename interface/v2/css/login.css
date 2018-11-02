@@ -1,0 +1,21 @@
+
+body{
+    background-color: #f5f5f5 ;
+    font-family: '微軟正黑體';
+}
+.logo{
+    background: url("../img/TGlogo.svg") no-repeat;
+    background-size: cover;
+    width: 275px;
+    height: 86px;
+}
+.logo_head{
+    padding-top: 10px;
+}
+.date{
+    font-size: 18px;
+    padding-top: 65px;
+    color: #2a2a2a;
+    padding-left: 5%;
+
+}

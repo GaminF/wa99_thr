@@ -1,0 +1,104 @@
+
+<div class="main_content">
+    <div class="content">
+	<!--
+        <form id="detail_form" action="history.php" method="GET">
+            <div class="head">
+            <div class="history_icon"></div>
+            <div class="page_title">历史帐务</div>
+            <div class="datepicker_group">
+                <div class="datepicker_text">日期查询 :</div>
+                <div><input class="datepicker" id="from" name="starttime" type="text" value="{date}"></div>
+                <input type="hidden" name="detail" value="1">
+                <div class="datepicker_icon"></div>
+                <div class="datepicker_text">至</div>
+                <div><input  class="datepicker" id="to" name="endtime" type="text" value="{date}"></div>
+                <div class="datepicker_icon"></div>
+                <button  class="datepicker_submit" onclick="return fromto();">发送</button>
+            </div>
+            </div>
+        </form>
+-->
+		
+            <div class="head ">
+                <div class="history_icon"></div>
+                <div class="page_title">历史帐务</div>
+                <form id="detail_form" name="detail_form" class="form-inline form-block">
+					<input type="hidden" name="detail"  id="detail" value="1">
+                </form>
+            </div>
+		
+            <div class="page_title_black_line"></div>
+            <div style="font-size: 22px;">
+                <span style="font-weight: 600;color:#555;">帐务时间</span><span style="padding: 10px;">{startdate}</span>~<span style="padding: 10px;">{enddate}</span>
+                <font size="2" color="gray">(仅显示最近三个交易日之帐务)</font>
+            </div>
+               
+                
+            
+            <!--    <table class="history_total">
+                    <tr>
+                        <td>合计</td>
+                        <td>&yen;{totaldealmoney}</td>
+                        <td>{totalresult}</td>
+                        <td class="color_green">{totalafter}</td>
+                  </div>  </tr>
+                </table>-->
+
+
+        
+            
+       
+        <!-- START BLOCK : userHistoryDetailTitleBlock -->
+            <div class="history_detail_wrap" id="history_table">
+                    <table class="history_detail_head">
+                        <tr>
+                            <td class="cell_9">单号</td>
+                            <td class="cell_9">交易时间</td>
+                            <td class="cell_9">开赛时间</td>
+                            <td class="cell_10">市场</td>
+                            <td class="cell_9">注单内容</td>
+                            <td class="cell_9">获利％</td>
+                            <td class="cell_9">金额</td>
+                            <td class="cell_9">总结算</td>
+                        </tr>
+                    </table>
+                    <!-- START BLOCK : userHistoryDetailBlock -->
+                    <table class="history_detail_content">
+                        <tr>
+                            <td class="cell_9">{betId}</td>
+                            <td class="cell_9">{createtime}</td>
+                            <td class="cell_9">{openDate}</td>
+                            <td class="cell_10">【{competition}】<br>{event}</td>
+                            <td class="cell_9 text_align_left padding_left">{market}{percentage}%<br>
+                               {selection}</td>
+                            <td class="cell_9">{profit}</td>
+                            <td class="cell_9">{dealmoney}</td>
+                            <td class="cell_9"><font color="{color}">{after}</font></td>
+                        </tr>
+                       
+                    </table>
+                    <!-- END BLOCK : userHistoryDetailBlock -->
+                    <!-- START BLOCK : nonBlock -->
+                    <table class="history_detail_content">
+                        <tr>
+                            <td class="cell_9">查无交易资料</td>
+                        </tr>
+                       
+                    </table>
+                    <!-- END BLOCK : nonBlock -->
+                    <table class="history_detail_total">
+                          <tr>
+                              <td class="cell_11">总共{i}笔资料</td>
+                              <td class="cell_12">&yen;{totaldealmoney}</td>
+                              <td class="cell_13"><font color="{color}">{totalafter}</font></td>
+                          </tr>
+                    </table>
+
+            </div>
+            <!-- END BLOCK : userHistoryDetailTitleBlock -->
+
+        </div>
+    </div>
+ 
+

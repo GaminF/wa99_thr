@@ -1,0 +1,246 @@
+<div class="main_content">
+    <div class="content">
+			<!-- START BLOCK : pointc2cTitle -->
+            <div class="head">
+                <div class="c2c_icon"></div>
+                <div class="page_title">会员互转</div>
+            </div>
+            <div class="page_title_black_line"></div>
+            <div class="wd_btn_group">
+                <a class="wd_btn1" href="pointDeposit.php">充值专区</a>
+                <a class="wd_btn2" href="pointRecive.php">提领专区</a>
+                 <a class="wd_btn9" href="pointc2c.php">会员互转</a>
+                <a class="wd_btn3" href="pointDetails.php">交易纪录</a>
+            </div>
+			<!-- END BLOCK : pointc2cTitle -->
+			
+			<!-- START BLOCK : pointc2cBank -->
+			<div class="onlinebank_content">
+				<div id="bankStep1">
+				<div class="step_title">步骤一.请输入互转资料</div>
+				<div class="onlinebank_block">
+					<div class="onlinebank_small_block">
+						<div class="onlinebank_table">
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#666666">转出账号：</font></div>
+								<div class="onlinebank_cell"><input type="text" readonly="readonly" value="{payuser}"></div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#08377E">转入帐号：</font></div>
+								<div class="onlinebank_cell"><input type="text" id="username" name="username" placeholder="请输入转入会员帐号"></div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#08377E">转入金额：</font></div>
+								<div class="onlinebank_cell"><input type="text" id="amount" name="amount" placeholder="请输入金额"></div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#08377E">交易密码：</font></div>
+								<div class="onlinebank_cell"><input type="password" id="wdpw" name="wdpw" placeholder="请输入密码"></div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#666666">手机门号：</font></div>
+								<div class="onlinebank_cell">
+									<div class="order03_cell">
+						                <select class="area" id="area" name="area" >
+						                	<!-- START BLOCK : YESCOUNTRYCODE -->
+											<option value="{countrycode}">{country}</option>
+											<!-- END BLOCK : YESCOUNTRYCODE -->
+											<!-- START BLOCK : NOCOUNTRYCODE -->
+											<option value="">请选择区码</option>
+											<!-- START BLOCK : GETCOUNTRYCODE -->
+											<option value="{code}">{country}</option>
+											<!-- END BLOCK : GETCOUNTRYCODE -->
+											<!-- END BLOCK : NOCOUNTRYCODE -->
+	
+				                		</select>
+				                	</div>
+
+				                		<div class="order03_cell"><input type="text" name="mobile" value="{usermobile}" readonly="readonly" ></div>
+				                	</div>	
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#666666">手机验证：</font></div>
+								<div class="order03_cell"><input type="text" id="smscode" name="smscode" placeholder="输入验证码" style="width: 204px"><button class="send_pwd" onclick="checksms()"><font color="#FFFFFF">传送验证码</font></button></div>
+							</div>
+						</div>
+						 <!-- START BLOCK : reservicemoneyBlock -->
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell"><font color="red"> ※您尚有保留点数{savenotice}未到期</font></div>
+                        </div>
+                        <!-- END BLOCK : reservicemoneyBlock -->
+					</div>
+					<div class="onlinebank_small_block">
+						<div class="onlinebank_notice">
+							<div class="notice_title_table">
+								<div class="notice_title_row">
+									<div class="notice_title_cell cell_28 ">
+										<div class="dotted_line"></div>
+									</div>
+									<div class="notice_title_cell cell_29">
+										<div class="wd_notice_group">
+											<div class="notice_icon"></div>
+											<div class="wd_notice_text">注意事项</div>
+											<div class="notice_icon"></div>
+										</div>
+									</div>
+									<div class="notice_title_cell cell_28">
+										<div class="dotted_line"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="onlinebank_notice">
+							<ul>
+								<li>请确实核实点数接收的会员帐号，<font color="#C1272D">一旦确认移转，平台恕不负责</font>。</li>
+								<li>转出点数将即刻生效，并于您的帐户扣除。</li>
+								<li>最低转出金额为１００RMB。</li>
+								<li>点数接收会员钱包有<font color="#C1272D">24小时冻结期</font>，过后方可进行提领操作。</li>	
+								<li>点数移转属平台服务功能，若会员间点数移转有争议，与本平台无关。
+								</li>		
+							</ul>
+							<button class="onlinebank_c2c" onclick="c2cstep2()">下一步</button>	
+						</div>
+						
+					</div>
+				</div>
+				</div>
+				<div id="bankStep2" style="display:none">
+				<div class="step_title">步骤二.请确认互转资料是否正确</div>
+				<div class="onlinebank_block">
+					<div class="onlinebank_small_block">
+						<div class="onlinebank_table">
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#666666">交易时间：</font></div>
+								<div class="onlinebank_cell cell_31">{nowtime}</div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#666666">转出帐号：</font></div>
+								<div class="onlinebank_cell cell_31">{payuser}</div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#08377E">转入帐号：</font></div>
+								<div class="onlinebank_cell cell_31" ><input id="icomeuser" type="text" readonly="readonly"></div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"><font color="#08377E">转入金额：</font></div>
+								<div class="onlinebank_cell cell_31"><input id="payamount" type="text" readonly="readonly"></div>
+							</div>
+						</div>
+						<div class="onlinebank_small_block">
+
+					</div>
+					</div>
+					<div class="onlinebank_small_block">
+						<div class="onlinebank_notice">
+							<div class="notice_title_table">
+								<div class="notice_title_row">
+									<div class="notice_title_cell cell_28 ">
+										<div class="dotted_line"></div>
+									</div>
+									<div class="notice_title_cell cell_29">
+										<div class="wd_notice_group">
+											<div class="notice_icon"></div>
+											<div class="wd_notice_text">注意事项</div>
+											<div class="notice_icon"></div>
+										</div>
+									</div>
+									<div class="notice_title_cell cell_28">
+										<div class="dotted_line"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="onlinebank_notice">
+							<ul>
+								<li>请确实核实点数接收的会员帐号，<font color="#C1272D">一旦确认移转，平台恕不负责</font>。</li>
+								<li>转出点数将即刻生效，并于您的帐户扣除。</li>
+								<li>最低转出金额为１００RMB。</li>
+								<li>点数接收会员钱包有<font color="#C1272D">24小时冻结期</font>，过后方可进行提领操作。</li>	
+								<li>点数移转属平台服务功能，若会员间点数移转有争议，与本平台无关。
+								</li>	
+							</ul>
+							<div class="notice_text">
+							<button class="onlinebank_c2c" onclick='checkc2c()' onKeyDown="return false;"><font color="#0085A">确认转出</font></button>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+				</div>
+			</div>
+			</div>
+			<!-- END BLOCK : pointc2cBank -->
+			<!-- START BLOCK : pointc2clock -->
+				<div class="onlinebank_content">
+				<div id="bankStep1">
+				<div class="step_title">步骤一.请输入互转资料</div>
+				<div class="onlinebank_block">
+					<div class="onlinebank_small_block">
+						<div class="onlinebank_table">
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"></div>
+								<div class="onlinebank_cell"></div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"></div>
+								<div class="onlinebank_cell"></div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"></div>
+								<div class="onlinebank_cell"></div>
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"></div>
+								<div class="onlinebank_cell"></div>	
+							</div>
+							<div class="onlinebank_row">
+								<div class="onlinebank_cell cell_30"></div>
+								<div class="onlinebank_cell cell_72">此会员无手机号码</div>
+							</div>
+						</div>
+					<div class="onlinebank_table">
+						  
+					</div>
+					</div>
+					<div class="onlinebank_small_block">
+						<div class="onlinebank_notice">
+							<div class="notice_title_table">
+								<div class="notice_title_row">
+									<div class="notice_title_cell cell_28 ">
+										<div class="dotted_line"></div>
+									</div>
+									<div class="notice_title_cell cell_29">
+										<div class="wd_notice_group">
+											<div class="notice_icon"></div>
+											<div class="wd_notice_text">注意事项</div>
+											<div class="notice_icon"></div>
+										</div>
+									</div>
+									<div class="notice_title_cell cell_28">
+										<div class="dotted_line"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="onlinebank_notice">
+							<ul>
+								<li>请确实核实点数接收的会员帐号，<font color="#C1272D">一旦确认移转，平台恕不负责</font>。</li>
+								<li>转出点数将即刻生效，并于您的帐户扣除。</li>
+								<li>最低转出金额为１００RMB。</li>
+								<li>点数接收会员钱包有<font color="#C1272D">24小时冻结期</font>，过后方可进行提领操作。</li>	
+								<li>点数移转属平台服务功能，若会员间点数移转有争议，与本平台无关。
+								</li>		
+							</ul>
+							<div class="notice_text">
+							P.S.如利用本平台进行任何洗钱诈骗行为，本公司保有权力终止会员服务及冻结其帐户。
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+
+            <!-- END BLOCK : pointc2clock -->
+	</div>	
+</div>

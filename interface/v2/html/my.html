@@ -1,0 +1,125 @@
+
+        <div class="main_content">
+            <div class="content">
+                <div class="head">
+                    <div class="my_icon"></div>
+                    <div class="page_title">我的</div>
+                </div>
+
+
+            <!-- START BLOCK : memberinfoBlock -->    
+                <div class="my_wrap">
+                    <div class="my2_member_name">Hi,{username}</div>
+                    <div class="my2_member_detail">
+                        <div class="member_detail_table">
+                            <div class="member_detail_row">
+                                <div class="member_detail_cell1">{quota}</div>
+                                <div class="member_detail_cell1">{dealmoneytotal}</div>
+                                <div class="member_detail_cell1">{i}</div>
+                            </div>
+                            <div class="member_detail_row">
+                                <div class="member_detail_cell2">可用余额</div>
+                                <div class="member_detail_cell2">现有交易额度</div>
+                                <div class="member_detail_cell2">正在交易笔数</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="member_info_title">个人/联系资料</div>
+                    <div class="member_info_wrap">
+                        <div class="member_info_table">
+                            <div class="member_info_row">
+                                <div class="member_info_cell cell_info1">移动电话</div>
+                                <div class="member_info_cell cell_info2"><div class="info_line"></div></div>
+                                <div class="member_info_cell cell_info3">{mobile}</div>
+                                <div class="member_info_cell cell_info4"></div>
+                            </div>
+                            <div class="member_info_row">
+                                <div class="member_info_cell cell_info1">QQ帐号</div>
+                                <div class="member_info_cell cell_info2"><div class="info_line"></div></div>
+                                <div class="member_info_cell cell_info3">{qq}</div>
+                                <div class="member_info_cell cell_info4"></div>
+                            </div>
+                            <div class="member_info_row">
+                                <div class="member_info_cell cell_info1">微信帐号</div>
+                                <div class="member_info_cell cell_info2"><div class="info_line"></div></div>
+                                <div class="member_info_cell cell_info3">{wechat}</div>
+                                <div class="member_info_cell cell_info4"></div>
+                            </div>
+                            <div class="member_info_row">
+                                <div class="member_info_cell cell_info1">登入密码</div>
+                                <div class="member_info_cell cell_info2"><div class="info_line"></div></div>
+                                <div class="member_info_cell cell_info3">{passwdhidden}</div>
+                                <div class="member_info_cell cell_info4"><div><button id="modify01"  class="modify_btn" onclick="alter('passwd')">更新</button></div></div>
+                            </div>
+                            <div class="member_info_row">
+                                <div class="member_info_cell cell_info1">提领密码</div>
+                                <div class="member_info_cell cell_info2"><div class="info_line"></div></div>
+                                <div class="member_info_cell cell_info3">{withdrawpasswordhidden}</div>
+                                <div class="member_info_cell cell_info4"><div><button id="modify02" class="modify_btn" onclick="alter('pickup')">更新</button></div></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+<!-- START BLOCK : memberinfoBlock --> 
+
+<div id="Modal_cover" class="cover">
+    <div class="modal_content">
+        <div class="modal_head"><span id="tag"></span>密码修改
+            <div class="close_icon"></i></div>
+        </div>
+        <div class="modal_table_wrap">
+            <div class="modal_table">
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">原始密码</div>
+                    <div class="modal_cell modal_cell_content"><input id="old" name="old" type="password" ></div>
+                </div>
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">更新密码</div>
+                    <div class="modal_cell modal_cell_content"><input id="new" name="new" type="password"></div>
+                </div>
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">确认密码</div>
+                    <div class="modal_cell modal_cell_content"><input id="new2" name="new2" type="password"></div>
+                </div>
+            </div>
+            <div class="modal_btn_group">
+                <input id="chgmun" type="hidden">
+                <button id="confirm_modify03"  onclick="modify()">确定修改</button>   
+                <button id="cancel_modify" onclick="reset()">取消修改</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--用不到
+<div id="Modal_cover03" class="cover">
+    <div class="modal_content02">
+        <div class="modal_head">電子信箱修改
+            <div class="close_icon"></div>
+        </div>
+        <div class="modal_table_wrap">
+            <div class="modal_table">
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">原始信箱</div>
+                    <div class="modal_cell modal_cell_content">tg@tg777.com</div>
+                </div>
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">更新信箱</div>
+                    <div class="modal_cell modal_cell_content"><input type="text"></div>
+                </div>
+            </div>
+            <div class="modal_btn_group">
+                <button id="confirm_modify03">确定修改</button>
+                <button id="cancel_modify03">取消修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+-->

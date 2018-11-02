@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>TAO GIN Banner</title>
+    <meta http-equiv="pragma" content="no-cache"><!--Not be cached-->
+	<meta http-equiv="Cache-Control" content="max-age=0" /><!--緩存時間-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/ideal-image-slider.css">
+	<link rel="stylesheet" href="css/default.css">
+	<style media="screen">
+	body{
+		background-color:#1e1e1e;
+	}
+	#slider {
+		max-width: 100%;
+		margin: 0auto;
+	}
+	</style>
+</head>
+<body>
+
+	<div id="slider">
+		<!--<img data-src="img/a1.jpg" alt="" />-->
+		<!--<a href=../view/rule/20170803active.pdf target="_blank"><img data-src="img/20170803banner.jpg" alt="" /></a>-->
+        <a href="http://w1.tg333.net/interface/v2/img/8888.pdf" target="_blank"><img data-src="img/banner8888.jpg" alt="" /></a>
+        <img data-src="img/banner180210.jpg" alt="" />
+        <img data-src="img/banner18020902.jpg" alt="" />
+        <img data-src="img/banner18020903.jpg" alt="" />
+        <!--<img data-src="img/20171024.jpg" alt="" />-->
+        <!--<a href=../view/rule/8888.compressed.pdf target="_blank"><img data-src="img/8888.jpg" alt="" /></a>-->
+        
+	</div>
+
+    <script src="js/ideal-image-slider.js"></script>
+
+    <script src="js/bullet-nav/iis-bullet-nav.js"></script>
+	<script>
+	var slider = new IdealImageSlider.Slider('#slider');
+	slider.addBulletNav();
+	slider.start();
+	</script>
+   
+</body>
+</html>

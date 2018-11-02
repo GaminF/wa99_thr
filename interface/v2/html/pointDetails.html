@@ -1,0 +1,69 @@
+<div class="main_content">
+    <div class="content">
+                <div class="head">
+                    <div class="wd_all_icon"></div>
+                    <div class="page_title">交易纪录</div>
+
+                     <div class="wd_btn_groupx">
+                        <div class="record_select">
+                            <select id="wdrecord"  onchange="wdrecord(this.value)">
+                                <option  value="3" {s3}>全部</option>
+                                <option  value="1" {s1}>充值纪录</option>
+                                <option  value="2" {s2}>提领纪录</option>
+                            </select>
+                        </div>
+                        <div class="all_page_select"><select id="p" onchange="page()">
+                             <option value="1" selected="selected">第01页</option>
+                        </select></div>
+                    </div>
+
+                </div>
+
+                <div class="page_title_black_line"></div>
+                <div class="wd_btn_group">
+                    <a class="wd_btn1" href="pointDeposit.php">充值专区</a>
+                    <a class="wd_btn2" href="pointRecive.php">提领专区</a>
+                    <a class="wd_btn9" href="pointc2c.php">会员互转</a>
+                    <a class="wd_btn3 btn_active">交易纪录</a>
+                    
+                </div>
+                <table class="wd_all_head">
+                    <tr>
+                        <td class="cell_32">交易日期</td>
+                        <td class="cell_33">交易类别</td>
+                        <td class="cell_34">交易方式</td>
+                        <td class="cell_35">交易金额</td>
+                        <td class="cell_36">交易状态</td>
+                        <td class="cell_37">余额</td>
+                        <td class="cell_38">备注</td>
+                    </tr>
+                </table>
+                <table class="wd_all_content">
+                <!-- START BLOCK : listMoneySavedetailBlock -->
+                    <tr>
+                        <td class="cell_32">{requestdate}<br>{requesttime}</td>
+                        <td class="cell_33">{action}</td>
+                        <td class="cell_34"><font color="{color_save}">{saveBy}</font></td>
+                        <td class="cell_35">{requestAmount}</td>
+                        <td class="cell_36 "><font color="{color_step}">{step}</font></td>
+                        <td class="cell_37">&yen;{mergeTotal}</td>
+                        <td class="cell_38" style="text-align:left;padding-left:5px;">{noteTag}</td>
+                    <!-- START BLOCK : listMoneySavedetailBlock -->    
+                    </tr>
+                    
+                </table>
+                <!-- START BLOCK : listMoneySaveBlock -->
+                <table class="wd_all_total">
+                    <tr>
+                        <td class="cell_32">合计</td>
+                        <td class="cell_33"></td>
+                        <td class="cell_35"></td>
+                        <td class="cell_35">&yen;{total}</td>
+                        <td class="cell_36"></td>
+                        <td class="cell_37"></td>
+                        <td class="cell_38"></td>
+                    </tr>
+                </table>
+                <!-- END BLOCK : listMoneySaveBlock -->    
+    </div>
+</div>

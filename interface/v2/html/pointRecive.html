@@ -1,0 +1,157 @@
+<div class="main_content">
+    <div class="content">
+        <div class="head">
+            <div class="wd_chinabank_icon"></div>
+            <div class="page_title">提领专区</div>
+        </div>
+        <div class="page_title_black_line"></div>
+        <div class="wd_btn_group">
+            <a class="wd_btn1" href="pointDeposit.php">充值专区</a>
+            <a class="wd_btn2 btn_active">提领专区</a>
+            <a class="wd_btn9" href="pointc2c.php">会员互转</a>
+            <a class="wd_btn3" href="pointDetails.php">交易纪录</a>
+        </div>
+        <div class="onlinebank_content">
+            <div class="step_title">请选择提款交易平台/填写汇款帐户金额</div>
+            <div class="onlinebank_block">
+                <div class="onlinebank_small_block">
+                    <div class="onlinebank_table"> 
+                    <!-- START BLOCK : widthdrawlockBlock -->
+                        <div class="onlinebank_row">
+                           <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell"></div>
+                        </div>
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell"></div>
+                            <div class="onlinebank_cell"></div>
+                        </div>
+
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell"></div>
+                        </div>
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell"></div>
+                        </div>
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell"></div>
+                            <div class="onlinebank_cell"></div>
+                        </div>
+                         
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell cell_31"></div>
+                        </div>
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell"></div>
+                        </div>
+
+                         <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell cell_72">此会员取消提领功能</div>
+                        </div>
+                         <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell cell_31"></div>
+                        </div>
+                         <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell cell_31"></div>
+                        </div>
+                         <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell cell_31"></div>
+                        </div>
+                         <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell cell_31"></div>
+                        </div>
+					</div>
+                     <!-- END BLOCK : widthdrawlockBlock -->
+                      
+                        <!-- START BLOCK : widthdrawmoneyBlock -->
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30">银行名称：</div>
+                            <div class="onlinebank_cell"><select id="bankid" name="bankid" onChange="bankid(this.value);" >
+                                 <!-- START BLOCK : getBankListBlock --> 
+                                <option value="{bkid}" {s}>{bankname}</option>
+                                 <!-- END BLOCK : getBankListBlock --> 
+                            </select></div>
+                        </div>
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30">银行帐号：</div>
+                            <div class="onlinebank_cell"><input id="account" type="text" {readonly} value="{account}" required oninvalid="setCustomValidity('请输入银行帐号');" oninput="setCustomValidity('');" ></div>
+                        </div>
+
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30">提款户名：</div>
+                            <div class="onlinebank_cell"><input id="accountName" type="text" readonly value="{accountName}" required oninvalid="setCustomValidity('请输入提款户名');" oninput="setCustomValidity('');" ></div>
+                        </div>
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30">提款金额：</div>
+                            <div class="onlinebank_cell"><input id="amount" type="text" required oninvalid="setCustomValidity('请输入提款金额');" oninput="setCustomValidity('');" ></div>
+                        </div>
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30">交易密码：</div>
+                            <div class="onlinebank_cell"><input id="widthdrawpassword" type="password" required oninvalid="setCustomValidity('请输入交易密码');" oninput="setCustomValidity('');" ></div>
+                        </div>
+                        <!-- START BLOCK : reservicemoneyBlock -->
+                        <div class="onlinebank_row">
+                            <div class="onlinebank_cell cell_30"></div>
+                            <div class="onlinebank_cell"><font color="red"> ※您尚有保留点数{savenotice}未到期</font></div>
+                        </div>
+                        <!-- END BLOCK : reservicemoneyBlock -->
+					</div>
+                    <input type="hidden" id="accountName" name="accountName" value='{accountName}'>
+                    <input type="hidden" id="account"     name="account"     value='{account}'>
+                    <input type="hidden" id="bankname"    name="bankname"    value='{bankname}'>
+                    <input type="hidden" id="fee"         name="fee"         value="{fee}">
+                    <input type="hidden" id="reached"     name="reached"     value="{reached}">
+                    <input type="hidden" id='savenotice' name="savenotice" value="{savenotice}">
+                    <div class="china_btn_block"><button id='confirm' class="confirm_trade" onclick="widthdraw()" onKeyDown="return false;">完成填写送出申请</button></div>
+                      
+                    <!-- END BLOCK : widthdrawmoneyBlock -->
+                  
+                </div>
+                <div class="onlinebank_small_block">
+                    <div class="choose_bank">
+                        <div class="chinabank_logo"></div>
+                        <!--<input type="checkbox" class="checkbox_chinabank">--><label class="china_bank">中国银联现金提款</label>
+                    </div>
+                    <div class="onlinebank_notice">
+                        <div class="notice_title_table">
+                            <div class="notice_title_row">
+                                <div class="notice_title_cell cell_28 ">
+                                    <div class="dotted_line"></div>
+                                </div>
+                                <div class="notice_title_cell cell_29">
+                                    <div class="wd_notice_group">
+                                        <div class="notice_icon"></div>
+                                        <div class="wd_notice_text">注意事项</div>
+                                        <div class="notice_icon"></div>
+                                    </div>
+                                </div>
+                                <div class="notice_title_cell cell_28">
+                                    <div class="dotted_line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="onlinebank_notice">
+                        <ul>
+                            <li>最低申请点数为100点以上。</li>
+                            <li>每周可享提领5次免手续费,如您欲再提领,本公司将收取提领金额之5%做为行政处理费。</li>
+                            <li>第一次提交申请送出后即会绑定该帐户，请务必将您的银行帐户填写正确，若提供之帐号有误导致损失，本公司恕不负责。</li>
+                        </ul>
+                        <div class="notice_text">P.S.如利用本平台进行任何洗钱诈骗行为,本公司将保留权力终止会员服务及冻结其帐户。</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="interface/v2/js/countdown.js"></script>

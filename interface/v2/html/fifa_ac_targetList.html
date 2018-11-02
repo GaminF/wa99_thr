@@ -1,0 +1,76 @@
+
+	<!-- START BLOCK : GameMarket -->
+	<!-- 市场項目 Right Table START-->
+	<div class="head">
+		<div class="market_list_icon fifa_market_list_icon"></div>
+		<div class="page_title fifa_page_title">世界杯专区-【市场列表】</div>
+		<div class="market_list_btn"><button class="game_record" id="game_record" onclick="pk()">对战</button><div class="update">更新<span id="runMarketTime">35</span></div></div>
+	</div>
+	<div class="page_title_black_line"></div>
+	<div class="market_game_title fifa_market_game_title" id="GameTitleInfo"></div>
+
+	<div class="market_whole_table">
+		<!-- START BLOCK : MarketTableRow -->
+		<div class="market_whole_row">
+		
+			<!-- START BLOCK : MarketTable -->
+			<div class="market_whole_cell {pos}"><!-- class分table_left, table_right -->
+<!--
+				<table class="market_table_head fifa_market_table_head">
+					<tr>
+						<td class="{cell}"><div class="{icon}"></div></td>
+						<td class="head_title cell_40">{marketname}</td><td class="cell_41 head_amount">成交量：{totaldealmoney}</td><td class="cell_42"><div class="head_icon2"></div></td>
+					</tr>
+				</table>
+-->
+				
+				<table class="market_table_content">
+					<caption class="market_table_head fifa_market_table_head">
+						<span class="{icon}"></span>
+						<span class="head_title">{marketname}</span>
+						<span class="head_amount">成交量：{totaldealmoney}</span>
+						<!--<button class="head_icon2" onclick="openchart({gameid},{ga12},{chartid})"></button>-->
+					</caption>
+					<tr class="content_title"><th class="cell_43">《选项》</th><th class="cell_44">《获利％》</th><th class="cell_45">《可交易量》</th></tr>
+					<!-- START BLOCK : MarketSelectList -->
+						<tr><td class="cell_43 cell_guaranteed">{pawbenicon}{selectItem}</td><td class="cell_44">{profit}</td><td class="cell_45">{tradingVolView}
+						<!-- START BLOCK : MarketSelectListButton -->
+						<div class="btn_order"><button onclick="fifa_MarketOrder( '{marketid}', '{selectid}', '{tradingVol}', '{marketname}', '{selectname}', '{profit}', '{systemrate}', '{price}', '{fee}','{pawben}' )">下单</button></div>
+						<!-- END BLOCK : MarketSelectListButton -->
+						</td></tr>
+					<!-- END BLOCK : MarketSelectList -->
+					<!-- START BLOCK : MarketSelectListLast -->
+						<tr class="content_last"><td class="cell_43">{selectItem}</td><td class="cell_44">{profit}</td><td class="cell_45">{tradingVolView}
+						<!-- START BLOCK : MarketSelectListButtonLast -->
+						<div class="btn_order"><button onclick="fifa_MarketOrder( '{marketid}', '{selectid}', '{tradingVol}', '{marketname}', '{selectname}', '{profit}', '{systemrate}', '{price}', '{fee}','{pawben}' )">下单</button></div>
+						<!-- END BLOCK : MarketSelectListButtonLast -->
+						</td></tr>
+					<!-- END BLOCK : MarketSelectListLast -->
+				</table>
+			</div>
+			<!-- END BLOCK : MarketTable -->
+
+		</div>
+		<!-- END BLOCK : MarketTableRow -->
+	</div>
+	<!-- 市场項目 Right Table END -->
+	<!-- END BLOCK : GameMarket -->
+	<div id="Modal_deal_chart" class="cover_game_record">		
+		<div class="modal_game_record">
+		    <div class="game_record_title" >
+		        <div class="dealchart_icon"></div>
+		        <div id="chartname"></div>
+		        <div class="close_modal" onclick="msgx()"></div>
+		    </div>
+			<div id="GameTitleInfo_chart" class="fifa_deal_chart_title"></div>
+			<div id="chart_content"></div>
+
+			
+		</div>
+	</div>
+	<!-- START BLOCK : GameMarketMsg -->
+	<script>msg( {'status':0, 'title':'', 'text1':'{msg}', 'text2':'', 'nextUrl':'targetList.php' } );</script>
+	<!-- END BLOCK : GameMarketMsg -->
+
+	
+	

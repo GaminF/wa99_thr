@@ -1,0 +1,122 @@
+
+    <div class="black_line"></div>
+    <div class="title_game_result">历年赛事结果</div>
+    <div id="carousel" class='outerWrapper'>
+    <!-- START BLOCK : scorerBlock -->
+        <div class="scorer_item">
+            <a href="statistics.php?cp={i}">
+            <div class="alli_logo">{file}</div>
+            <div class="alli_name">{union}</div>
+            </a>
+        </div>
+    <!-- END BLOCK : scorerBlock  -->
+    </div>
+    
+    <div class="black_line"></div>
+    <div class="alli_game_name_title">{union_name}</div>
+    <div class="score_total">波胆比分统计</div>
+   
+    <div class="history_game_wrap_table">
+        <div class="history_game_wrap_row">
+
+        <!-- START BLOCK : xfile0 -->
+            <div class="history_game_wrap_cell table_left">  
+                <div class="history_game_head">{titleName}</div>
+                    <table class="history_game_table">
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">排名</td>
+                            <td class="history_game_cell">赛果</td>
+                            <td class="history_game_cell">次数</td>
+                            <td class="history_game_cell">百分比</td>
+                        </tr>
+                        <!-- START BLOCK : score0 -->
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">{0}</td>
+                            <td class="history_game_cell">{1}</td>
+                            <td class="history_game_cell">{2}</td>
+                            <td class="history_game_cell">{3}</td>
+                        </tr>
+                        <!-- END BLOCK : score0 -->
+                    </table>
+            </div>
+            <!-- END BLOCK : xfile0 -->
+            <!-- START BLOCK : xfile1 -->
+                <div class="history_game_wrap_cell table_right">
+                    <div class="history_game_head02">{titleName}</div>
+                    <table class="history_game_table">
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">排名</td>
+                            <td class="history_game_cell">赛果</td>
+                            <td class="history_game_cell">次数</td>
+                            <td class="history_game_cell">百分比</td>
+                        </tr>
+                         <!-- START BLOCK : score1 -->
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">{0}</td>
+                            <td class="history_game_cell">{1}</td>
+                            <td class="history_game_cell">{2}</td>
+                            <td class="history_game_cell">{3}</td>
+                        </tr>
+                        <!-- END BLOCK : score1 -->
+                    </table>
+                </div>
+            </div>
+            <!-- END BLOCK : xfile1 -->
+            <!-- START BLOCK : xfile2 -->
+            <div class="history_game_wrap_row">
+                <div class="history_game_wrap_cell table_left">
+                    <div class="history_game_head03">{titleName}</div>
+                    <table class="history_game_table">
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">排名</td>
+                            <td class="history_game_cell">赛果</td>
+                            <td class="history_game_cell">次数</td>
+                            <td class="history_game_cell">百分比</td>
+                        </tr>
+                        <!-- START BLOCK : score2 -->
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">{0}</td>
+                            <td class="history_game_cell">{1}</td>
+                            <td class="history_game_cell">{2}</td>
+                            <td class="history_game_cell">{3}</td>
+                        </tr>
+                        <!-- END BLOCK : score2 -->
+                    </table>
+                </div>
+                <!-- END BLOCK : xfile2 -->
+
+                <!-- START BLOCK : xfile3 -->
+                <div class="history_game_wrap_cell table_right">
+                    <div class="history_game_head04">{titleName}</div>
+                    <table class="history_game_table">
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">排名</td>
+                            <td class="history_game_cell">赛果</td>
+                            <td class="history_game_cell">次数</td>
+                            <td class="history_game_cell">百分比</td>
+                        </tr>
+                         <!-- START BLOCK : score3 -->
+                        <tr class="history_game_row">
+                            <td class="history_game_cell">{0}</td>
+                            <td class="history_game_cell">{1}</td>
+                            <td class="history_game_cell">{2}</td>
+                            <td class="history_game_cell">{3}</td>
+                        </tr>
+                        <!-- END BLOCK : score3 -->
+                    </table>
+                </div>
+                 <!-- END BLOCK : xfile3 -->
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <script src="interface/v2/js/jquery-3.2.1.min.js"></script>
+ 
+    <script src="interface/v2/js/waltzerjs.js"></script>
+
+    <script type="text/javascript">
+        $('#carousel').waltzer();
+    </script>

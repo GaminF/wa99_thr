@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 63.7 30.8" style="enable-background:new 0 0 63.7 30.8;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#8C0000;}
+	.st1{fill:#BF0202;}
+	.st2{fill:#660000;}
+	.st3{opacity:0.2;fill:#FFFFFF;enable-background:new    ;}
+	.st4{opacity:0.3;fill:#FFFFFF;enable-background:new    ;}
+	.st5{opacity:0.4;fill:url(#SVGID_1_);enable-background:new    ;}
+</style>
+<g>
+	<g>
+		<path class="st0" d="M0,2.2c0-0.9,1-1.6,2.2-1.6h59.5c1.2,0,2.2,0.7,2.2,1.6v26.9c0,0.9-1,1.7-2.2,1.7H2.2C1,30.8,0,30.1,0,29.1
+			L0,2.2L0,2.2z"/>
+		<path class="st1" d="M61.6,0H2.1C0.9,0-0.1,0.7-0.1,1.6v0.6c0-0.9,1-1.6,2.2-1.6h59.5c1.2,0,2.2,0.7,2.2,1.6V1.6
+			C63.7,0.7,62.8,0,61.6,0z"/>
+		<path class="st2" d="M2.1,30.7h59.5c1.2,0,2.2-0.7,2.2-1.7v-1.4c0,0.9-1,1.6-2.2,1.6H2.1c-1.2,0-2.2-0.7-2.2-1.6V29
+			C0,30,0.9,30.7,2.1,30.7z"/>
+		<path class="st3" d="M0,24.3l15.5,5.1H0.8c0,0-0.8,0-0.8-0.2V24.3z"/>
+		<polyline class="st4" points="0,18.5 6.5,29.3 0.1,29.3 		"/>
+		<path class="st3" d="M63.7,5.7L48.1,0.6h14.8c0,0,0.8,0,0.8,0.2L63.7,5.7L63.7,5.7z"/>
+		<polyline class="st4" points="63.7,11.6 57.2,0.6 63.7,0.6 		"/>
+	</g>
+	
+		<radialGradient id="SVGID_1_" cx="1524.1431" cy="696.3847" r="3.4721" gradientTransform="matrix(16.8822 0 0 -7.7477 -25735.1738 5411.4517)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<rect class="st5" width="63.8" height="29.3"/>
+</g>
+</svg>

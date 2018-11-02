@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd' [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg id="圖層_1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 1334.1 53.7" xml:space="preserve" viewBox="0 0 1334.1 53.7" version="1.1" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink">
+<switch>
+	<foreignObject y="0" x="0" height="1" width="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
+	</foreignObject>
+	<g>
+			<linearGradient id="SVGID_1_" y2="6.4956" gradientUnits="userSpaceOnUse" x2="667.03" y1="54.589" x1="667.03">
+				<stop stop-color="#002368" offset="0"/>
+				<stop stop-color="#124889" offset=".2052"/>
+				<stop stop-color="#2065A3" offset=".4095"/>
+				<stop stop-color="#2A7AB5" offset=".6114"/>
+				<stop stop-color="#3087C0" offset=".8096"/>
+				<stop stop-color="#328BC4" offset="1"/>
+			</linearGradient>
+			<path d="m1334.1 53.7v-48.7c0-2.8-3.7-5-8.1-5h-1317.9c-4.4 0-8.1 2.3-8.1 5v48.7h1334.1z" fill="url(#SVGID_1_)"/>
+			<path opacity=".15" d="m1334.1 53.7v-45.1c0-4.4 0-8.6-8.1-8.6h-352.8c54.1 0 262.1 4.4 337.9 53.7h23z" fill="#4ECDF9"/>
+			<path opacity=".2" d="m1325.9 0h-118.6c76.9 0 121.2 41.4 126.5 53.7 0.1-0.4 0.2-20.5 0.3-20.8v-23.5c0-4.4 0.6-9.4-8.2-9.4z" fill="#E1FEFF"/>
+	</g>
+</switch>
+</svg>

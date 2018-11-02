@@ -1,0 +1,46 @@
+
+
+    <div class="cooperation_banner"></div>
+
+    <div class="cooper_block">
+        <div class="block01"></div>
+        <div class="block02"></div>
+        <div class="block03"></div>
+    </div>
+
+    <div class="black_line"></div>
+
+    <div>
+        <div class="cooper_title_wrap">
+            <div class="cooper_title">联络淘金网</div>
+            <div class="cooper_sub">淘金网正在寻找志同道合的业务合作伙伴，各种相关的业务申请合作(游戏厂商佳)，<br>请留下您的联系资料，我们将有专人尽速与您联系。</div>
+        </div>
+        <form name="cooperation" method="POST" onsubmit="return sendmail();">
+            <div class="onlinebank_block">
+                <div class="name_wrap">
+                    <div >称　呼：</div>
+                    <div><input id="name" class="form_name" type="text" placeholder="称呼*"></div>
+                </div>
+                <div class="email_wrap">
+                    <div>电    邮：</div>
+                    <div><input id="email" name="email" class="form_email" type="text" placeholder="电邮*"></div>
+                </div>
+                <textarea id="msg" name='msg' placeholder="" style="resize: none" placeholder="输入讯息*"></textarea>
+                请输入验证码<img id="imgcode" src="pic.php" onclick="refresh_code()"><br>
+           点击图片可更换验证码(区分大小写)
+                    <input type="text" id="check_word" name="check_word" size="10" maxlength="10" placeholder="验证码*"><br>
+                <script>
+                    function refresh_code(){ 
+                        document.getElementById("imgcode").src="pic.php"; 
+                    } 
+
+                    
+                </script>
+                <button class="form_submit">提出</button>
+                <button class="form_cancel" type="reset">取消</button>
+                  
+            </div>
+        </form>
+    </div>
+
+</div>

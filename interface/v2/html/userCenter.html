@@ -1,0 +1,198 @@
+<div class="main_content">
+    <div class="content">
+                <div class="head">
+                    <div class="my_icon"></div>
+                    <div class="page_title">会员中心</div>
+                </div>
+                <div class="page_title_black_line"></div>
+
+            <!-- START BLOCK : memberinfoBlock -->
+                <div class="my_wrap">
+                    <div class="my_head">
+                        <div class="my_icon1"></div>
+                        <div class="personal_info">个人资料</div>
+                    </div>
+                    <div class="my_content_table_wrap">
+                        <table class="my_content_table">
+                        
+                            <tr>
+                                <td class="cell_title">会员帐号</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{username}</td>
+                                
+                            </tr>
+
+                            <tr>
+                                <td class="cell_title">可用余额</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{quota}</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="cell_title">现有交易额度</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{dealmoneytotal}</td>
+
+                            </tr>
+                            <tr>
+                                <td class="cell_title">正在交易笔数</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{i}</td>
+                                <td></td>
+
+                            </tr>
+                            <tr>
+                                <td class="cell_title">密&nbsp;&nbsp;&nbsp;&nbsp;码</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{passwdhidden}</td>
+                                <td>
+                                    <div>
+                                        <button id="modify01"  class="modify_btn" onclick="alter('passwd')">更新</button>
+                                    </div>
+                                </td>
+
+                            </tr>
+                            <tr class="">
+                                <td class="cell_title">提款密码</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{withdrawpasswordhidden}</td>
+                                <td>
+                                    <div>
+                                        <button id="modify02" class="modify_btn" onclick="alter('pickup')">更新</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        
+                        </table>
+                    </div>
+                    <div class="my_head">
+                        <div class="my_icon2"></div>
+                        <div class="personal_info">联系资料</div>
+                    </div>
+                    <div class="my_content_table_wrap">
+                        <table class="my_content_table">
+                            <!--<tr>
+                                <td class="cell_title">电子信箱</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{mail}</td>
+                                <td>
+                                    <div>
+                                        <button id="modify03" class="modify_btn">修改</button>
+                                    </div>
+                                </td>
+                            </tr>-->
+
+                            <tr>
+                                <td class="cell_title">移动电话</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{mobile}</td>
+                                <td>
+                                   <!-- <div>
+                                        <button id="modify04" class="modify_btn">修改</button>
+                                    </div>-->
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="cell_title">QQ帐号</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{qq}</td>
+                                <td>
+                                 <!--<div>
+                                        <button id="modify05" class="modify_btn">修改</button>
+                                    </div>-->
+                                </td>
+
+                            </tr>
+                            <tr>
+                                <td class="cell_title">微信帐号</td>
+                                <td>
+                                    <div class="cell_dash"></div>
+                                </td>
+                                <td class="cell_content">{wechat}</td>
+                                <td>
+                                   <!-- <div>
+                                        <button id="modify06" class="modify_btn">修改</button>
+                                    </div>-->
+                                </td>
+
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            <!-- END BLOCK : memberinfoBlock -->    
+
+
+<div id="Modal_cover" class="cover">
+    <div class="modal_content">
+        <div class="modal_head"><span id="tag"></span>密码修改
+            <div class="close_icon"></i></div>
+        </div>
+        <div class="modal_table_wrap">
+            <div class="modal_table">
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">原始密码</div>
+                    <div class="modal_cell modal_cell_content"><input id="old" name="old" type="password" ></div>
+                </div>
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">更新密码</div>
+                    <div class="modal_cell modal_cell_content"><input id="new" name="new" type="password"></div>
+                </div>
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">确认密码</div>
+                    <div class="modal_cell modal_cell_content"><input id="new2" name="new2" type="password"></div>
+                </div>
+            </div>
+            <div class="modal_btn_group">
+                <input id="chgmun" type="hidden">
+                <button  onclick="modify()">确定修改</button>   
+                <button id="cancel_modify" onclick="reset()">取消修改</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div id="Modal_cover03" class="cover">
+    <div class="modal_content02">
+        <div class="modal_head">電子信箱修改
+            <div class="close_icon"><i class="fa fa-times" aria-hidden="true"></i></div>
+        </div>
+        <div class="modal_table_wrap">
+            <div class="modal_table">
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">原始信箱</div>
+                    <div class="modal_cell modal_cell_content">tg@tg777.com</div>
+                </div>
+                <div class="modal_row">
+                    <div class="modal_cell modal_cell_title">更新信箱</div>
+                    <div class="modal_cell modal_cell_content"><input type="text"></div>
+                </div>
+            </div>
+            <div class="modal_btn_group">
+                <button id="confirm_modify03">确定修改</button>
+                <button id="cancel_modify03">取消修改</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    </div>
+</div>

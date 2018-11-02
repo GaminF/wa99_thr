@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="99.2px" height="30.8px" viewBox="0 0 99.2 30.8" enable-background="new 0 0 99.2 30.8" xml:space="preserve">
+<g>
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="49.5766" y1="30.7779" x2="49.5766" y2="0.628">
+		<stop  offset="0" style="stop-color:#0654A2"/>
+		<stop  offset="5.434031e-002" style="stop-color:#054C99"/>
+		<stop  offset="0.2087" style="stop-color:#043B84"/>
+		<stop  offset="0.3602" style="stop-color:#033177"/>
+		<stop  offset="0.5044" style="stop-color:#032D73"/>
+		<stop  offset="0.7321" style="stop-color:#0559A7"/>
+		<stop  offset="0.9054" style="stop-color:#0675C9"/>
+		<stop  offset="1" style="stop-color:#067FD5"/>
+	</linearGradient>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="url(#SVGID_1_)" d="M0,2.3c0-0.9,1-1.6,2.2-1.6H97c1.2,0,2.2,0.7,2.2,1.6v26.9
+		c0,0.9-1,1.7-2.2,1.7H2.2C1,30.8,0,30,0,29.1V2.3z"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#1D9FEF" d="M97,0H2.2C1,0,0,0.7,0,1.6v0.6c0-0.9,1-1.6,2.2-1.6H97
+		c1.2,0,2.2,0.7,2.2,1.6V1.6C99.2,0.7,98.2,0,97,0z"/>
+	<path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" fill="#06285B" d="M2.2,30.8H97c1.2,0,2.2-0.7,2.2-1.7v-1.4
+		c0,0.9-1,1.6-2.2,1.6H2.2C1,29.4,0,28.6,0,27.7v1.4C0,30,1,30.8,2.2,30.8z"/>
+	<path opacity="0.3" fill="#FFFFFF" d="M0,24.3l15.5,5.1H0.8c0,0-0.8,0-0.8-0.2V24.3z"/>
+	<polyline opacity="0.3" fill="#FFFFFF" points="0,18.5 6.5,29.4 0.1,29.4 	"/>
+	<path opacity="0.3" fill="#FFFFFF" d="M99.2,5.7L83.5,0.6h14.8c0,0,0.8,0,0.8,0.2V5.7z"/>
+	<polyline opacity="0.3" fill="#FFFFFF" points="99.2,11.6 92.6,0.6 99.1,0.6 	"/>
+	
+		<radialGradient id="SVGID_2_" cx="1522.1971" cy="-418.3195" r="3.6076" gradientTransform="matrix(25.1073 0 0 7.7477 -38224.9336 3257.1448)" gradientUnits="userSpaceOnUse">
+		<stop  offset="0" style="stop-color:#FFFFFF"/>
+		<stop  offset="1" style="stop-color:#FFFFFF;stop-opacity:0"/>
+	</radialGradient>
+	<path opacity="0.4" fill="url(#SVGID_2_)" d="M97.2,29.3l-95.3,0c-1.1,0-1.9-0.9-1.9-1.9L0,1.9C0,0.9,0.9,0,1.9,0l95.3,0
+		c1.1,0,1.9,0.9,1.9,1.9l0,25.4C99.2,28.4,98.3,29.3,97.2,29.3z"/>
+	<path fill-rule="evenodd" clip-rule="evenodd" fill="#FFFFFF" d="M21,16.1v0.8c3.2,1.9,4.8,0.9,4.8,5.1h-6.5h-0.1h-6.6
+		c0-4.3,1.6-3.2,4.8-5.1v-0.7c-0.6-0.4-0.7-1.1-0.9-1.9h0c-0.1,0-0.2-0.1-0.2-0.3c0,0,0,0,0-0.1c0-0.1-0.1-0.2-0.1-0.4
+		c-0.1-0.2-0.3-0.7-0.1-0.9c0.2-0.1,0.3,0,0.3,0c-0.2-1.2-0.6-2.8,1.1-3.3c0-1.1,4-0.6,4.5,1.1c0.2,0.7-0.1,2.2-0.1,2.2
+		c0-0.1,0.1-0.1,0.2-0.1c0.2,0.1,0,0.8-0.1,1c0,0.2-0.1,0.3-0.2,0.4v0c0,0.2-0.1,0.3-0.1,0.3C21.7,15,21.6,15.7,21,16.1L21,16.1z"/>
+</g>
+</svg>

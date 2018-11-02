@@ -1,0 +1,117 @@
+<!-- 開始 把userHistoryAmount的資料送到userHistoryDetail-->
+	<script>
+		function amount(starttime,endtime)
+		{
+			//alert("i:"+i);
+			var iData = new Object;
+			iData['starttime'] = starttime;
+			iData['endtime'] = endtime;
+			iData['function_name'] ='userHistoryAmount';
+			iData['tag'] = 'result15';
+			ajaxPost( iData );
+			return;
+		}
+		
+		function ajaxPost( iData )
+		{
+			Actions = jQuery.ajax({
+				type: 'GET',
+				url:  'api.php',
+				data: iData,
+				error: function(xhr) {
+				},
+				beforeSend:function(result)
+				{
+				},
+				success: function(answer) {
+					$('#'+iData['tag']).html(answer); //# MEANS ID
+
+				}
+			});
+		}
+
+
+	</script>
+<!-- 結束 把userHistoryAmount的資料送到userHistoryDetail-->
+
+<!-- 開始 c2GetNoticeInfo設置按鈕呼叫公告內容-->
+	<script>
+	    function info(value) //傳送按鈕的值
+		{
+			//alert("i:"+i);
+			var iData = new Object;
+			iData['type'] =value;
+			iData['function_name'] ='c2GetNoticeInfo';
+			iData['tag'] = 'result14';
+			ajaxPost( iData );
+			return;
+		}
+	</script>
+<!-- 結束 c2GetNoticeInfo設置按鈕呼叫公告內容-->
+
+<!-- 開始 gameHistoryDetail選擇日期以呼叫當日賽事列表-->
+	<script>
+		    function selectDate(va) //把option的值拿出來
+			{
+				alert("i:"+va);
+				var iData = new Object;
+				iData['day'] = va;
+				iData['function_name'] ='gameHistoryDetail';
+				iData['tag'] = 'result2';
+				ajaxPost( iData );
+				return;
+			}
+			
+	</script>
+<!-- 結束 gameHistoryDetail選擇日期以呼叫當日賽事列表-->
+
+<!-- 開始 由c2gamelist送資料給c2selectlist4-->
+<script>
+		    function showList4(gameid,ga12,effectivetime) 
+			{
+				//alert("i:"+i);
+				var iData = new Object;
+				iData['gameid'] = gameid;
+				iData['ga12'] = ga12;
+				iData['effectivetime'] = effectivetime;
+				iData['function_name'] ='c2gselectlist4';
+				iData['tag'] = 'result4';
+				ajaxPost( iData );
+				return;
+			}
+</script>
+<!-- 結束 由c2gamelist送資料給c2selectlist4-->
+
+<!-- 開始 輸入帳號密碼得到回傳值-->
+<script>
+		    function login() 
+			{
+				//alert("i:"+$('#userid').val());
+
+				var iData = new Object;
+				iData['id'] = $('#userid').val();
+				iData['pw'] = $('#userpw').val();
+				iData['function_name'] ='memberlogin';
+				iData['tag'] = 'result23';
+				ajaxPost( iData );
+				return;
+			}
+</script>
+<!-- 結束 輸入帳號密碼得到回傳值-->
+
+<!-- 開始 由memberlogin帶值進入memberinfo-->
+<script>
+		    function memberinfo(sessionid,sessionusername) 
+			{
+				//alert("i:"+$('#userid').val());
+
+				var iData = new Object;
+				iData['sessionid'] = sessionid,;
+				iData['sessionusername'] = sessionusername;
+				iData['function_name'] ='MemberInfo';
+				iData['tag'] = 'result21';
+				ajaxPost( iData );
+				return;
+			}
+</script>
+<!-- 結束 由memberlogin帶值進入memberinfo-->

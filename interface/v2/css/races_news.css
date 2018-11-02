@@ -1,0 +1,813 @@
+@charset "utf-8";
+/*popularRaces*/
+
+@font-face {
+	font-family: "BebasNeue";
+	src: url('../fonts/BebasNeue.otf');
+}
+
+.popularRaces {
+	text-align: center;
+	margin: 0 auto;
+	font-family: "Microsoft JhengHei";
+	font-weight: bold;
+	color: #000;
+}
+.popularRaces .popularRaceUL {
+	width: 100%;
+	height: auto;
+}
+.popularRaces .popularRaceUL .popularRaces_title {
+	background: none;
+	display: inline-block;
+	width: 50%;
+	height: auto;
+	text-align: center;
+}
+.popularRaces .popularRaceUL .popularRaces_title a:hover,
+.popularRaces .popularRaceUL .popularRaces_title.active a:focus,
+.popularRaces .popularRaceUL .popularRaces_title.active a:hover,
+.popularRaces .popularRaceUL .popularRaces_title a {
+	display: block;
+	width: 100%;
+	height: inherit;
+	background: none;
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	padding: 25px 0 15px;
+	border-bottom: 2px solid #999;
+	color: #999;
+	text-align: center;
+}
+.popularRaces .popularRaceUL .popularRaces_title a:hover,
+.popularRaces .popularRaceUL .popularRaces_title.active a,
+.popularRaces .popularRaceUL .popularRaces_title.active a:focus,
+.popularRaces .popularRaceUL .popularRaces_title.active a:hover {
+	color: #000;
+	border-bottom: 2px solid #000;
+}
+.popularRaces_content {
+	background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+#popuPaces {
+	padding: 0;
+    background: #fff;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 25px auto;
+}
+#hotNews {
+	padding: 0;
+	position: relative;
+	background: #fff;
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    margin: 25px auto;
+}
+
+.topONe,
+.topTwo,
+.topThree {
+	display: inline-block;
+	width: 33.3%;
+	height: 100%;
+	border-right: 1px solid #e6e6e6;
+	padding: 20px 0;
+}
+
+#topONe,
+#topTwo,
+#topThree {
+	width: 100%;
+	height: 100%;
+}
+
+.topThree {
+	border: 0;
+}
+
+.gameTitle {
+	color: #000;
+	font-weight: bold;
+	font-size: 21px;
+	letter-spacing: 4px;
+}
+
+.racesCanvas {
+	position: relative;
+	height: 150px;
+	width: 150px;
+	margin: 0 auto 20px;
+}
+
+.racesCanvas::after {
+	content: "";
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+	right: 0;
+	width: 150px;
+	height: 15px;
+	border-radius: 50%;
+	background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.07) 54%, rgba(0, 0, 0, 0.02) 63%, rgba(0, 0, 0, 0) 69%, rgba(0, 0, 0, 0) 100%);
+	background: -o-radial-gradient(center, ellipse, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.07) 54%, rgba(0, 0, 0, 0.02) 63%, rgba(0, 0, 0, 0) 69%, rgba(0, 0, 0, 0) 100%);
+	background: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.07) 54%, rgba(0, 0, 0, 0.02) 63%, rgba(0, 0, 0, 0) 69%, rgba(0, 0, 0, 0) 100%);
+	text-align: center;
+	margin: 0 auto;
+}
+
+.topONe .racesCanvas {
+	background: url('../img/home_hot_nav_01.svg') center no-repeat;
+	background-size: contain;
+}
+
+.topTwo .racesCanvas {
+	background: url('../img/home_hot_nav_02.svg') center no-repeat;
+	background-size: contain;
+}
+
+.topThree .racesCanvas {
+	background: url('../img/home_hot_nav_03.svg') center no-repeat;
+	background-size: contain;
+}
+
+#topOneScore,
+#topTwoScore,
+#topThreeScore {
+	font-family: "BebasNeue";
+	position: relative;
+	top: 50px;
+	left: 2px;
+	font-size: 42px;
+	letter-spacing: 2px;
+	font-weight: 900;
+	line-height: 45px;
+	display: block;
+	width: 100%;
+}
+
+#topOneScore {
+	color: #ff3300;
+}
+
+#topTwoScore {
+	color: #1d90a0;
+}
+
+#topThreeScore {
+	color: #61961d;
+}
+
+#topOneScore::after,
+#topTwoScore::after,
+#topThreeScore::after {
+	content: "成交量";
+	font-size: 12px;
+	display: block;
+	position: absolute;
+	bottom: -36px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+#topONE,
+#topTWO,
+#topTHREE {
+	position: absolute;
+	top: 1px;
+	left: 0px;
+	right: 0;
+	margin: 0 auto;
+	z-index: 11;
+	width: 100%;
+	height: 100%;
+}
+
+
+.gameTitle::before {
+	content: "【";
+}
+
+.gameTitle::after {
+	content: "】";
+}
+
+.gameDate,
+.teamsName {
+	font-weight: 900;
+	font-size: 16px;
+}
+
+.gameScore {
+	position: relative;
+	font-size: 20px;
+	letter-spacing: 5px;
+}
+.guaranteed_icon {
+	position: absolute;
+    top: -2px;
+    width: 35px;
+    height: 35px;
+    background: url('../img/popuRace/guaranteed_icon.svg') center no-repeat;
+    background-size: contain;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding-left: 0px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -1px;
+}
+
+.gameLinkBtn {
+	background: url(../img/popularRaces_btn.svg) center center no-repeat;
+	background-size: contain;
+	display: block;
+	margin: 0 auto;
+	width: 100px;
+	height: 30px;
+	color: #fff;
+	font-size: 16px;
+	letter-spacing: 2px;
+	line-height: 30px;
+    cursor: pointer;
+}
+
+.gameLinkBtn:hover,
+.gameLinkBtn:active {
+	color: #0542DB;
+}
+
+
+/* SVG */
+.circleSvg {
+	position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+#one_value {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	    transform-origin: center;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+#two_value {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	    transform-origin: center;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+#three_value {
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	    transform: rotate(90deg);
+	-webkit-transform-origin: center;
+	-ms-transform-origin: center;
+	    transform-origin: center;
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+
+
+
+/* hotnews */
+.side_nav_icon0 {
+	background: url("../img/popuRace/newanav_newspaper01.svg") no-repeat;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+
+}
+.side_nav ul li:hover .side_nav_icon0 {
+	background: url("../img/popuRace/newanav_newspaper02.svg") no-repeat;
+	background-size: cover;
+	width: 20px;
+	height: 20px;
+}
+.news_page_title_line {
+	height: 1px;
+}
+
+.prev_btn {
+	position: absolute;
+	top: 42%;
+    left: -75px;
+}
+.prev_btn .left_btn {
+	display: block;
+	width: 45px;
+	height: 45px;
+	background: url('../img/popuRace/newanav_01.svg') center no-repeat;
+	background-size: contain;
+}
+.prev_btn:hover .left_btn {
+	background: url('../img/popuRace/newanav_02.svg') center no-repeat;
+	background-size: contain;
+}
+.next_btn {
+	position: absolute;
+	top: 42%;
+    right: -75px;
+}
+.next_btn .right_btn {
+	display: block;
+	width: 45px;
+	height: 45px;
+	background: url('../img/popuRace/newanav_03.svg') center no-repeat;
+	background-size: contain;
+}
+.next_btn:hover .right_btn {
+	background: url('../img/popuRace/newanav_04.svg') center no-repeat;
+	background-size: contain;
+}
+.news_list {
+	height: 440px;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.news_list > li {
+	display: inline;
+	position: relative;
+}
+.news_LI {
+    margin-left: 0px;
+}
+.news_list_content {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	width: 388px;
+	height: 100%;
+	padding: 20px;
+	white-space: normal;
+	border-right: 1px solid #e6e6e6;
+}
+.news_list img {
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	max-height: 295px;
+}
+.hotnews_title {
+	display: block;
+	font-size: 21px;
+	color: #506f7c;
+	text-align: left;
+	font-weight: 700;
+	position: absolute;
+    left: 20px;
+    right: 20px;
+    top: 71%;
+}
+a:hover .hotnews_title {
+	color: #1a1a1a;
+}
+.news_list_info {
+	position: absolute;
+	left: 20px;
+	right: 20px;
+	bottom: 10px;
+}
+.news_list_info > span {
+	display: inline-block;
+	vertical-align: sub;
+	width: 20%;
+	text-align: left;
+	color: #808080;
+	font-size: 13px;
+	font-weight: 700;
+}
+span.info_date {
+	width: 40%;
+}
+.info_date::before {
+	content: '';
+	display: inline-block;
+	width: 40px;
+	height: 20px;
+	background: url('../img/popuRace/newanav_hot01.svg') center no-repeat;
+	background-size: contain;
+	vertical-align: sub;
+	margin-right: 2px;
+}
+.info_like::before {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 20px;
+	background: url('../img/popuRace/newanav_good.svg') center no-repeat;
+	background-size: contain;
+	vertical-align: sub;
+	margin-right: 2px;
+}
+.info_comment::before {
+	content: '';
+	display: inline-block;
+	width: 15px;
+	height: 20px;
+	background: url('../img/popuRace/newanav_talk.svg') center no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	margin-right: 2px;
+}
+.info_view::before {
+	content: '';
+	display: inline-block;
+	width: 20px;
+	height: 15px;
+	background: url('../img/popuRace/newanav_see.svg') center no-repeat;
+	background-size: contain;
+	vertical-align: sub;
+	margin-right: 2px;
+}
+
+
+
+/* news_page */
+.news_page_main_content {
+	padding: 80px 50px 50px;
+}
+.news_page_icon {
+	background: url("../img/popuRace/newanav_newspaper01.svg") no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	width: 30px;
+	height: 30px;
+}
+.news_page_title {
+	vertical-align: middle;
+}
+.page_1-4 {
+	margin-top: -5px;
+	margin-bottom: 10px;
+}
+.page_1-4 li {
+    background: #fff;
+    -webkit-box-shadow: 0 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 0 1px 2px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    width: 82.5%;
+	display: inline-block;
+    width: 20%;
+    vertical-align: middle;
+    margin: 0 6px 20px;
+}
+.page_1-4 li:nth-child(1) {
+    margin: 0 6px 20px 0;
+}
+.page_1-4 li .news_list_content {
+	width: 100%;
+	height: 350px;
+	position: relative;
+}
+.page_1-4 li img {
+    width: 100%;
+    height: auto;
+	max-height: 210px;
+	margin: 0 auto;
+}
+.page_1-4 li .hotnews_title {
+	color: #506f7c;
+    font-size: 18px;
+	margin: 5px 0 10px;
+	top: 66%;
+}
+
+.page_1-4 li:hover .hotnews_title {
+    color: #227D99;
+}
+
+.page_1-4 li .newsPage_lcGroup {
+	position: absolute;
+	bottom: 40px;
+	left: 20px;
+	right: 17px;
+	font-size: 15px;
+}
+.page_1-4 li .newsPage_dvGroup {
+	position: absolute;
+	bottom: 10px;
+	left: 17px;
+	right: 17px;
+	font-size: 15px;
+}
+.page_1-4 li .newsPage_lcGroup span,
+.page_1-4 li .newsPage_dvGroup span {
+	color: #808080;
+	font-size: 15px;
+	font-weight: 700;
+}
+.page_1-4 li .newsPage_lcGroup span.info_like {
+	margin-right: 15px;
+}
+.page_1-4 li .newsPage_dvGroup span.info_view {
+	position: absolute;
+	right: 0px;
+}
+
+.page_5-10 {
+    background: #fff;
+    -webkit-box-shadow: 0 0 1px 2px rgba(0,0,0,0.3);
+            box-shadow: 0 0 1px 2px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    width: 82.7%;
+	padding: 10px;
+}
+.page_5-10 li {
+	border-bottom: 1px solid #e6e6e6;
+}
+.page_5-10 li:first-child {
+	border-top: 1px solid #e6e6e6;
+}
+.page_5-10 li .news_list_content {
+	width: 100%;
+	padding: 10px;
+	height: auto;
+	min-height: 120px;
+	border: 0;
+}
+.page_5-10 li img {
+	display: inline-block;
+	vertical-align: top;
+	width: 11%;
+	height: 120px;
+	margin-right: 10px;
+}
+.page_5-10 li .title_N_outline {
+	display: inline-block;
+	vertical-align: top;
+	height: 100%;
+	width: 87%;
+}
+.page_5-10 li .hotnews_title {
+	font-size: 20px;
+	color: #4d4d4d;
+	margin: 8px 0 5px;
+	position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.page_5-10 li .content_outline {
+	color: #999;
+	font-size: 15px;
+	font-weight: 900;
+}
+.page_5-10 li:hover .content_outline {
+	color: #5e9eb7;
+}
+.page_5-10 li .news_list_info {
+	position: relative;
+    display: block;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0px;
+    top: 15px;
+}
+.page_5-10 li .news_list_info span {
+	font-weight: 700;
+	font-size: 14px;
+	color: #999;
+	width: auto;
+}
+.page_5-10 li .news_list_info span.info_date {
+	position: absolute;
+	right: 0;
+	text-align: right;
+}
+.page_5-10 li .news_list_info span.info_date::before {
+	background: none;
+}
+
+/* news content */
+.news_main_content {
+	padding: 80px 50px 50px;
+}
+
+.news_content {
+	display: inline-block;
+	width: 38%;
+	margin-right: 25px
+}
+
+.news_content_title {
+	margin: 0px 0 10px;
+	font-size: 30px;
+	font-weight: 900;
+	color: #1a1a1a;
+	line-height: 38px;
+}
+.news_content_info {
+	position: relative;
+	height: 50px;
+	width: 100%;
+}
+.news_content_info span {
+	color: #808080;
+	font-size: 17px;
+	font-weight: 700;
+	vertical-align: middle;
+	line-height: 30px;
+}
+.news_content_info span.info_like {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 150px;
+}
+.news_content_info span.info_view {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0px;
+}
+.news_content .main_img {
+	width: 100%;
+	height: auto;
+	margin: 0 auto 25px;
+}
+.news_content_texts {
+	color: #1a1a1a;
+	font-size: 19px;
+	font-weight: 900;
+	margin-bottom: 20px;
+}
+
+.comment_content {
+	display: inline-block;
+	width: 34%;
+	background: #fff;
+	height: auto;
+	padding: 15px 20px;
+	border-radius: 25px;
+	-webkit-box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+	        box-shadow: 0 0 3px 2px rgba(0,0,0,0.3);
+	vertical-align: top;
+	text-align: center;
+}
+.comment_num {
+	color: #1a1a1a;
+	font-size: 17px;
+	font-weight: 900;
+	padding: 5px 0 15px;
+	border-bottom: 1px solid #ccc;
+	text-align: left;
+}
+.comment_num::before {
+	content: "";
+	display: inline-block;
+	background: url('../img/popuRace/newanav_talk_bk.svg') center no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	height: 30px;
+	width: 50px;
+}
+.comment_num::after {
+	content: "则评论";
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 2px;
+	margin-top: -5px;
+}
+.comment_icon {
+	display: inline-block;
+	width: 10%;
+	height: 40px;
+	vertical-align: top;
+	background: url('../img/popuRace/newanav_talkpeople.svg') top left no-repeat;
+	background-size: contain;
+}
+.comment_input {
+	position: relative;
+	display: inline-block;
+	border: 1px solid #4d4d4d;
+	border-radius: 8px;
+	width: 89%;
+	height: auto;
+	margin: 0;
+	background: #fff;
+}
+.comment_input textarea {
+	background: none;
+	margin: 0;
+	border: 0;
+	width: 100%;
+	height: auto;
+	margin-bottom: 35px;
+	text-align: left;
+	overflow: auto;
+}
+.comment_btn {
+	background: url('../img/popuRace/newanav_talksend.svg') center left no-repeat;
+	background-size: cover;
+	border: 0;
+	width: 75px;
+	height: 30px;
+	border-radius: 5px;
+	letter-spacing: 2px;
+	padding-top: 3px;
+	padding-left: 25px;
+	font-size: 15px;
+	font-weight: 700;
+	position: absolute;
+	right: 5px;
+	bottom: 5px;
+	color: #808080;
+}
+.comment_hot {
+	color: #1a1a1a;
+	font-size: 17px;
+	font-weight: 900;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 0;
+	text-align: left;
+}
+.comment_hot::after {
+	content: "";
+	display: inline-block;
+	background: url('../img/popuRace/newanav_talk_hot.svg') center no-repeat;
+	background-size: contain;
+	vertical-align: middle;
+	height: 15px;
+	width: 15px;
+	margin-top: -3px;
+	margin-left: 5px;
+}
+.comment {
+	border-bottom: 1px solid #b3b3b3;
+	padding: 12px 0 5px;
+}
+.comment_info {
+	display: inline-block;
+	position: relative;
+	font-weight: 900;
+	color: #808080;
+	width: 89%;
+	text-align: left;
+}
+.comment_info .info_like {
+	position: absolute;
+	right: 0;
+	top: -3px;
+	bottom: 0;
+	vertical-align: top;
+	font-size: 16px
+}
+.comment_time {
+	display: block;
+	font-size: 15px
+}
+.comment_account {
+	color: #009eff;
+	font-size: 16px
+}
+.comment_text {
+	color: #4d4d4d;
+	font-size: 16px;
+	margin: 8px 0;
+	letter-spacing: 1px;
+	font-weight: 900;
+	text-align: left;
+}
+.more_comment {
+	width: 150px;
+	height: 30px;
+	margin: 20px auto 10px;
+	background: url('../img/popuRace/newanav_talkmore.svg') center no-repeat;
+	background-size: cover;
+	border: 0;
+	font-weight: 900;
+	color: #328bc4;
+	padding-left: 28px;
+	text-align: center;
+}

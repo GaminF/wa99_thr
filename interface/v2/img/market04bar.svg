@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd' [
+	<!ENTITY ns_extend "http://ns.adobe.com/Extensibility/1.0/">
+	<!ENTITY ns_ai "http://ns.adobe.com/AdobeIllustrator/10.0/">
+	<!ENTITY ns_graphs "http://ns.adobe.com/Graphs/1.0/">
+	<!ENTITY ns_vars "http://ns.adobe.com/Variables/1.0/">
+	<!ENTITY ns_imrep "http://ns.adobe.com/ImageReplacement/1.0/">
+	<!ENTITY ns_sfw "http://ns.adobe.com/SaveForWeb/1.0/">
+	<!ENTITY ns_custom "http://ns.adobe.com/GenericCustomNamespace/1.0/">
+	<!ENTITY ns_adobe_xpath "http://ns.adobe.com/XPath/1.0/">
+]>
+<svg id="圖層_1" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 1073.1 53.7" xml:space="preserve" viewBox="0 0 1073.1 53.7" version="1.1" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink">
+<switch>
+	<foreignObject y="0" x="0" height="1" width="1" requiredExtensions="http://ns.adobe.com/AdobeIllustrator/10.0/">
+	</foreignObject>
+	<g>
+		<linearGradient id="SVGID_1_" y2="6.4956" gradientUnits="userSpaceOnUse" x2="536.54" y1="54.589" x1="536.54">
+			<stop stop-color="#002368" offset="0"/>
+			<stop stop-color="#124889" offset=".2052"/>
+			<stop stop-color="#2065A3" offset=".4095"/>
+			<stop stop-color="#2A7AB5" offset=".6114"/>
+			<stop stop-color="#3087C0" offset=".8096"/>
+			<stop stop-color="#328BC4" offset="1"/>
+		</linearGradient>
+		<path d="m1073.1 53.7v-48.7c0-2.8-2.3-5-5-5h-1063.1c-2.7 0-5 2.3-5 5v48.7h1073.1z" fill="url(#SVGID_1_)"/>
+		<path opacity=".2" d="m1073.1 41.2c-50.8 14.5-895.1 9.2-912.8 8.2-149.9-8.7-157.7-38.7-156.4-49.3-2.2 0.5-3.9 2.5-3.9 4.9v48.7h1073.1v-12.5z" fill="#002368"/>
+		<path opacity=".15" d="m1073.1 53.7v-48.7c0-2.8-2.3-5-5-5h-1020.4c86.8 0 829.9 4.4 951.5 53.7h73.9z" fill="#4ECDF9"/>
+		<path opacity=".2" d="m1068.1 0h-294c286.2 1.8 290.4 41.4 299 53.7 0.2-0.4-0.1-20.5 0-20.8v-27.9c0-2.7-2.3-5-5-5z" fill="#E1FEFF"/>
+		<path opacity=".2" d="m0 5v48.7c31.7-26.8 109.7-53.6 252.2-53.7h-247.2c-2.7 0-5 2.3-5 5z" fill="#E1FEFF"/>
+			<radialGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" cy="-989.4" cx="1996.1" gradientTransform="matrix(25.376 0 0 3.3476 -50710 3341.7)" r="28.247">
+			<stop stop-color="#fff" offset="0"/>
+			<stop stop-color="#fff" stop-opacity="0" offset="1"/>
+		</radialGradient>
+		<path opacity=".25" d="m828.3 53.7h-828.3v-48.5c0-2.8 2.2-5 5-5h823.3v53.5z" fill="url(#SVGID_2_)"/>
+	</g>
+</switch>
+</svg>

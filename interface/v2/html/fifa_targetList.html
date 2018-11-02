@@ -1,0 +1,352 @@
+    <!-- START BLOCK : fifa_coming 
+    <div class="head">
+        <div class="market_list_icon fifa_market_list_icon"></div>
+        <div class="page_title fifa_page_title">世界杯专区-【市场列表】</div>
+    </div>
+    <div class="page_title_black_line"></div>
+        <div class="LiveClock">
+            <div class="LiveClockInner">
+                <span id="day" class="timeDay"></span>
+                <span id="hour" class="timeHour"></span>
+                <span id="min" class="timeMin"></span>
+                <span id="sec" class="timeSec"></span>
+            </div>
+        </div>
+     END BLOCK : fifa_coming -->   
+
+        <div class="main_content market_sidebar">
+            <div class="content_block_table">
+                <div class="content_block_row">
+                    <div class="content_block_left">
+						<div class="content_block_left_wrap">
+						<!-- START BLOCK : gameMainItem -->
+							<div class="v1{switchTag} fifa_market_sidebar">
+								<div class="market_btn_space">
+									<div class="market_btn_wrap ">
+										<div class="market_btn">
+											<!--<div class="tab_block"></div>-->
+											<div class="market_btn_icon0{iNum}"></div>
+											<div class="game_list_tab">{listTag}<br></div>
+											<div class="market_btn_arrow"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- START BLOCK : gameList -->
+							<div class="market_game_list" style="display:{switchStatus}">
+								<!-- START BLOCK : gameListItem -->
+								<div class="fifa_market_game market_game {marketGameActive}" onclick="fifa_marketTab( '{gameid}', '{ga12}', '{gametime}', '{competitionname}', '{gamename}')">
+									<div class="game_wrap fifa_game_wrap">
+										<div class="game_name_wrap">
+											<div class="game_category">【{competitionname}】{dateStr} &rarr; <span>{timeStr}</span></div>
+											<div class="game_name">{gamename}{pawben}</div>
+											<div class="game_score"></div>
+										</div>
+									</div>
+								</div>
+								<!-- END BLOCK : gameListItem -->
+							</div>
+							<!-- END BLOCK : gameList -->
+						<!-- END BLOCK : gameMainItem -->
+	
+						</div>
+					</div>
+					
+					<div class="content_block_right" id="MarketInfo">
+						<div class="head">
+							<div class="market_list_icon"></div>
+							<div class="page_title fifa_page_title">市场列表</div>
+						</div>
+						<div class="page_title_black_line"></div>
+						<div class="please_choose_game_wrap" ><div class="please_choose_game">请点选左边赛事列表</div></div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+
+
+<!-- 下注POPUP1 START -->
+<div id="Modal_orderInput" class="cover_order fifa_cover_order">
+    <div class="modal_order01">
+        <div class="modal_head_order">交易信息
+            <div class="close_icon" onclick="closePopup( 'Modal_orderInput' )"></div>
+        </div>
+        <div class="order_game">
+            <div class="order_name">
+                <div><span id="sGameTime"></span> [<span id="sCPName"></span>]</div>
+               <div><span id="sGameName" class="fifa_sGameName"></span><span id="sPawben" ></span></div>
+            </div>
+            <div class="order_score">
+                <div class="order_score_line1"><div class="against_icon"></div><span id="MarketInfo_Item"></span></div>
+                <div class="order_score_line2" id="MarketInfo_Select"></div>
+            </div>
+        </div>
+        <div class="blue_title_wrap">
+        <div class="blue_title">
+            <div class="against_text">您正在<span class="blink">反对</span><span id="MarketInfo_ItemSelect" style="color:#fff"></span></div>
+        </div>
+            <div class="blue_title2"></div>
+        </div>		
+        <div class="order_cost">
+            <div class="order_table">
+                <div class="order_row">
+                    <div class="order_cell">
+                        <div class="order_title">交易金额</div>
+                    </div>
+                    <div class="order_cell order_input"><input type="text" id="OrderAmount" name="OrderAmount" onkeyup="Calculate()"></div>
+                </div>
+                <div class="order_row">
+                    <div class="order_cell">
+                        <div class="order_title">获利％</div>
+                    </div>
+                    <div class="order_cell order_input"><input type="text" id="sProfit" readonly></div>
+                </div>
+            </div>
+            <div class="order_table">
+                <div class="order_row">
+                    <div class="order_cell">
+                        <div class="order_title">预估获利</div>
+                    </div>
+                    <div class="order_cell order_total">
+                        <div class="order_total_num"><span id="Result"></span>
+                            <div class="fee">※手续费：5%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="order_btn_group" id="fastAmountBar">
+				<!-- START BLOCK : gameAddOrderAmount -->
+                <button onclick="addOrderAmount('{addAmount}')">+{addAmount}</button>
+				<!-- END BLOCK : gameAddOrderAmount -->
+                <button class="all_btn" onclick="addOrderAmount('all')">全部</button>
+            </div>
+            <div class="order_overage">
+                <div class="setting_icon" id="setting"></div>
+                <div class="overage">可用余额：<span id="pQuotaView">{quotaView}</span></div>
+            </div>
+
+        </div>
+        <div class="gray_dotted"></div>
+        <div class="modal_btn_group">
+            <button id="orderConfirm" onclick="fifa_MarketConfirm()">确定交易</button>
+            <button id="cancel_order02" onclick="closePopup( 'Modal_orderInput' )">取消交易</button>
+        </div>
+    </div>
+</div>
+<!-- 下注POPUP1 END -->
+<!-- 下注POPUP2 START -->
+
+<div id="Modal_order02" class="cover_order fifa_cover_order">
+    <div class="modal_order02">
+        <div class="modal_head_order">交易信息
+            <div class="close_icon"></div>
+        </div>
+
+        <div class="order_game">
+            <div class="order_name">
+                <div><span id="sGameTime2"></span> [<span id="sCPName2"></span>]</div>
+                <div><span id="sGameName2" class="fifa_sGameName"></span><span id="sPawben2" ></span></div>
+            </div>
+            <div class="order_score">
+                <div class="order_score_line1"><div class="against_icon"></div><span id="MarketInfo_Item2"></span></div>
+                <div id="MarketInfo_Select2"></div>
+            </div>
+        </div>
+        <div class="blue_title_wrap">
+        <div class="blue_title">
+            <div class="against_text">您正在<span class="blink">反对</span><span id="MarketInfo_ItemSelect2" style="color:#fff"></span></div>
+        </div>
+            <div class="blue_title2"></div>
+        </div>	
+        <div class="order_cost">
+            <div class="order_table">
+                <div class="order_row">
+                    <div class="order_cell">
+                        <div class="order_title">交易金额</div>
+                    </div>
+                    <div class="order_cell order_total">
+                        <div class="order_total_num black_num" id="OrderAmount2"></div>
+                    </div>
+                </div>
+                <div class="order_row">
+                    <div class="order_cell">
+                        <div class="order_title">获利％</div>
+                    </div>
+                    <div class="order_cell order_total">
+                        <div class="order_total_num black_num" id="sProfit2">5566</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order_table">
+                <div class="order_row">
+                    <div class="order_cell">
+                        <div class="order_title">预估获利</div>
+                    </div>
+                    <div class="order_cell order_total">
+                        <div class="order_total_num"><span id="Result2"></span>
+                            <div class="fee">※手续费：5%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		<p class="fifa_check">请确认交易明细无误，<strong>确认交易后</strong>，即无法变更住单</p>
+
+        </div>
+        <div class="gray_dotted"></div>
+        <div class="check_overage"><div class="overage">可用余额：<span id="pQuotaView">{quotaView}</span></div></div>
+        <div class="gray_dotted"></div>
+        <div class="modal_btn_group">
+            <button id="orderSubmit" onclick="fifa_orderSubmit()">确定交易</button>
+            <button id="cancel_order02" onclick="closePopup( 'Modal_order02' )">取消交易</button>
+        </div>
+    </div>
+</div>
+<!-- 下注POPUP2 END -->
+
+<div id="Modal_setting" class="cover_order fifa_cover_order">
+    <div class="modal_setting">
+        <div class="modal_head_order">快捷金额设定
+            <div class="close_icon_setting"></div>
+        </div>
+
+        <div class="setting_wrap">
+            <div class="setting_table">
+                <div class="setting_row">
+                    <div class="setting_cell">第一设定值</div>
+                    <div class="setting_cell"><input type="text" id="fastAmount0" name="fastAmount0" value="{fastAmount0}"></div>
+                </div>
+                <div class="setting_row">
+                    <div class="setting_cell">第二设定值</div>
+                    <div class="setting_cell"><input type="text" id="fastAmount1" name="fastAmount1" value="{fastAmount1}"></div>
+                </div>
+                <div class="setting_row">
+                    <div class="setting_cell">第三设定值</div>
+                    <div class="setting_cell"><input type="text" id="fastAmount2" name="fastAmount2" value="{fastAmount2}"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal_setting_btn_group">
+            <button id="setting_confirm" onclick="upFastAmount()">确定</button>
+            <button id="setting_cancel">取消</button>
+        </div>
+    </div>
+</div>
+
+<!-- 下注POPUP RESULT START -->
+<div id="Modal_order03" class="cover_order03 fifa_cover_order03">
+    <div class="modal_order03">
+        <div class="success_icon_wrap"><div class="success_icon"></div></div>
+        <div class="modal_head_order03">交易成功<div class="close_icon"></div></div>
+        <div class="order03_warp">
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49"><div class="title_bg">联　盟</div></div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_competitionname">---</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">時　间</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_gametime">---</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">赛　事</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_game">---</div>
+                        <div id="res_pawben"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">选　项</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="against_icon_gray"></div>
+                        <div class="order03_text" id="res_gameselect">---</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">单　号</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_betid">---</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">金　额</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_dealmoney">---</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">获　利</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text color_red" id="res_profit">---</div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">预估获利</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text color_green" id="res_conversion">---</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="cloud"></div>
+    </div>
+</div>
+<!-- 下注POPUP RESULT END -->
+
+<div id="Modal_game_record" class="cover_game_record fifa_cover_game_record">
+    <div class="modal_game_record">
+		<div class="game_record_title">
+			<div class="game_record_icon"></div>
+			<div>过往对战纪录</div>
+			<div class="close_modal"></div>
+		</div>
+        <div class="game_record_head_table">
+            <div class="game_record_head_row">
+                <div class="game_record_head_cell cell_56">联盟</div>
+                <div class="game_record_head_cell cell_57">开赛日期/時間</div>
+                <div class="game_record_head_cell cell_58">主场球队</div>
+                <div class="game_record_head_cell cell_59">客场球队</div>
+                <div class="game_record_head_cell cell_60">波胆</div>
+                <div class="game_record_head_cell cell_61">半场波胆</div>
+            </div>
+        </div>
+        <div class="game_record_content" id="pkrecord">
+
+		</div>
+	</div>
+</div>

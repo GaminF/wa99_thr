@@ -1,0 +1,176 @@
+
+<!--<div id="Modal_times" class="cover">
+    <div class="modal_times">
+        <div class="modal_head">交易成功
+            <div class="close_icon"></div>
+        </div>
+    <div class="submit_bg">
+        <div class="submit_text">提醒您，截至目前为止</div>
+        <div class="submit_text"><span>免手续费</span>优惠</div>
+        <div id="feecircle" class="countdown2"></div>
+        <div class="submit_text blue_bg">每周(一)凌晨00：00重新计算</div>
+        <div class="submit_btn_group">
+            <button class="submit_confirm2" id="confirm_next" onclick="javascript:location.href='./pointDetails.php'">确定</button>
+        </div>
+    </div>
+    </div>
+</div>-->
+
+<div id="Modal_times" class="cover_order"><!--free fee-->
+    <div class="modal_times">
+        <div class="modal_times_mark_wrap"><div class="modal_times_mark"></div></div>
+        <div class="modal_times_head">交易次数提醒
+            <div class="close_icon" onclick="javascript:location.href='./pointDetails.php'"></div>
+        </div>
+        <div class="modal_times_text">
+            <div class="text_line1">提醒您！截至目前为止</div>
+            <div class="text_line2">免手续费优惠</div>
+        </div>
+        <div id="countdown"></div>
+         <div class="daily_reset_wrap"><div class="daily_reset">每周(一)凌晨00：00重新计算</div></div>
+         <div class="modal_times_btn_wrap"><button class="modal_times_confirm" onclick="javascript:location.href='./pointDetails.php'">确&nbsp;定</button></div>
+    </div>
+ </div>
+
+<div id="Modal_times_none" class="cover_order"><!--0.05 fee-->
+    <div class="modal_times_none">
+        <div class="modal_times_mark_wrap"><div class="modal_times_mark"></div></div>
+        <div class="modal_times_head">交易次数提醒
+            <div class="close_icon" onclick="javascript:location.href='./pointDetails.php'"></div>
+        </div>
+        <div class="modal_times_text">
+            <div class="text_line1">提醒您！截至目前为止</div>
+            <div class="text_line2">免手续费优惠</div>
+        </div>
+        <div id="countdown_money"></div>
+        <div class="modal_times_text">
+            <div class="text_line3">若继续交易将收取<span>５％</span>行政费用点数<br>
+                    <span id='feecount'></span><br>
+                   于您申请的<span>提领金额内扣除</span>。</div>
+        </div>
+
+        <div class="daily_reset_wrap"><div class="daily_reset">每周(一)凌晨00：00重新计算</div></div>
+        <div class="modal_times_btn_wrap">
+            <button id=payfee class="modal_times_confirm2" onclick="feemoneytips()">确&nbsp;定</button>
+            <button class="modal_times_cancel">取&nbsp;消</button>
+        </div>
+    </div>
+</div>
+
+
+<!--這段是客服訊息-->
+<div id="Modal_service" class="cover_order">
+    <div class="modal_service">
+        <div class="modal_head_pmode"><div id='service'></div>
+            <div class="close_icon"></div>
+        </div>
+        <div id="QRcode" style="text-align:center;"></div>
+       
+    </div>
+</div>
+<!--這段是客服訊息 結束-->
+
+<!-- 提示訊息 開始-->
+<div id="msgx" class="cover">
+    <div class="modal_success_wd">
+        <div class="modal_head"><span id="title"></span>
+            <div id="popupClose" class="close_icon" onclick="msgx()"></div>
+        </div>
+        <div class="success_wrap">
+            <div id="icon" class="success_icon"></div>
+            <div id="fontstyle" class="success_text"><div id="text1"></div><span id="text2" class="success_text2"></span></div>
+        </div>
+    </div>
+</div>
+<!-- 提示訊息 結束-->
+
+<!-- START BLOCK : maintainPopup -->
+<div id="Modal_pmode" class="cover_order">
+    <div class="modal_pmode">
+        <div class="modal_head_pmode">系統提示
+            <div class="close_icon"></div>
+        </div>
+        <div class="pmode_content">
+        <div class="pmode_opps"></div>
+        <div class="pmode_text">{description}</div>
+        <button class="pmode_ok" id="pmode">我知道了</button>
+    </div>
+    </div>
+</div>
+<!-- END BLOCK : maintainPopup -->
+<!-- c2c 交易成功开始 -->
+<div id="Modal_order03" class="cover_order03">
+    <div class="modal_order03">
+        <div class="success_icon_wrap"><div class="success_icon"></div></div>
+        <div class="modal_head_order03">会员互转-交易完成</div>
+        <div class="order03_warp">
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49"><div class="title_bg">交易单号</div></div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_orderNum"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">交易時间</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="res_orderTime"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">转出帐号</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="payuser"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">转入帐号</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="incomeuser"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <div class="order03_row">
+                    <div class="order03_cell cell_49">
+                        <div class="title_bg">转入金额</div>
+                    </div>
+                    <div class="order03_cell cell_50">
+                        <div class="order03_text" id="incomeamount"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="order03_table">
+                <button class="onlinebank_c2c" onclick="javascript:location.href='pointDetails.php'">前往交易记录</button>
+            </div>
+       </div>
+    </div>
+</div>
+<!-- c2c 交易成功 结束-->
+
+
+<div id="Loading" style="display:none">
+<div class="cover_loading"></div>
+    <div id="loader">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>

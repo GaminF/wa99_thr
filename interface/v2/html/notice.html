@@ -1,0 +1,61 @@
+<div class="main_content">
+    <div class="content">
+            <div class="head">
+                <div class="announce_icon"></div>
+                <div class="page_title">{titlename}</div>
+            </div>
+            <div class="page_title_black_line"></div>
+		<!-- START BLOCK : c2GetNoticeInfoTitleBlock -->             
+		<div class="announce_btn_group">
+			<form action="notice.php" method="get">
+				<button class="announce_btn1" id="type" name="type" value="3">个人讯息<br><span>会员个人讯息通知</span></button>
+				<button class="announce_btn2" id="type" name="type" value="2">网站公告<br><span>官方网站各项讯息公告</span></button>
+			</form>
+		</div>
+		<!-- END BLOCK : c2GetNoticeInfoTitleBlock -->
+  
+        <div class="announce_wrap">
+            <table class="announce_head">
+                <tr>
+                    <td class="cell_20">公告日期</td>
+                    <td class="cell_21">主题</td>
+                </tr>
+            </table>
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+					<!-- START BLOCK : c2GetNoticeInfoBlock -->    
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapsel{i}">
+                                <div class="message_table">                                 
+                                    <div class="message_row">                                 
+                                        <div class="message_date">{noticdate}</div>
+                                        <div class="message_title">{notictitle}</div>
+                                        <div class="message_mark"><div class="message_icon"></div></div>                                     
+                                    </div>
+                                </div>
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapsel{i}" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <p>{noticcontents}</p>
+                        </div>
+                    </div>
+					<!-- END BLOCK : c2GetNoticeInfoBlock -->
+					<!-- START BLOCK : c2GetNoticeInfoNotFindBlock -->    
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapsel{i}">
+                                <div class="message_table" style="padding:50px;text-align:center;">                                 
+                                    <div class="message_row">暂无您的讯息</div>
+                                </div>
+                            </a>
+                        </h4>
+                    </div>
+					<!-- END BLOCK : c2GetNoticeInfoNotFindBlock -->   
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>

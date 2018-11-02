@@ -1,0 +1,50 @@
+	<div class="head">
+		<div class="alliance_icon"></div>
+		<div class="page_title">选择联盟</div>
+		<div class="market_list_btn">
+		<!--
+			<div class="re_choose" onclick="clearMarketCPTab()"><div></div>重选</div>
+			
+			<div class="confirm_select" onclick="showMarketCPList()"><div></div>确认</div>
+			<a><div class="back" onclick="showMarketSelectCP()"><div></div>返回</div></a>
+			-->
+		</div>
+	</div>
+	
+	<div class="page_title_black_line"></div>
+	
+	<!-- START BLOCK : MarketSelectCP -->
+	<div id="MarketSelectCP">
+		<!-- START BLOCK : MarketSelectCP_Row -->
+		<div class="choose_alli_row">
+			<!-- START BLOCK : MarketSelectCP_RowList -->
+			<div class="choose_alli {lastTag}">
+				<input type="checkbox" id="c{CPName}"/>
+				<label class="ah" for="c{CPName}"><span onclick="showMarketCPTab( '{CPName}' )"></span></label>
+				<div class="alliance_name">{CPName}</div>
+			</div>
+			<!-- END BLOCK : MarketSelectCP_RowList -->
+		</div>
+		<!-- END BLOCK : MarketSelectCP_Row -->
+	</div>
+	<!-- END BLOCK : MarketSelectCP -->
+	
+	<!-- START BLOCK : MarketCPList -->
+	<div class="alli_choose_table">
+		<div class="alli_choose_head">
+			<div>开赛日期</div><div>开赛时间</div><div>联盟</div><div>赛事</div>
+			<div></div>
+		</div>
+		<!-- START BLOCK : MarketCPList_Table -->
+		<div id="tab{CPName}" style="display:none">
+		<input type="hidden" id="cpTabArrs" name="cpTabArr[]" value="{CPName}">
+		<!-- START BLOCK : MarketCPList_TableRow -->
+		<div class="alli_choose_row">
+			<div>{gameDay}</div><div>{gameTime}</div><div>{competitionname}</div><div>{gamename}</div>
+			<div><button onclick="marketTab( '{gameid}', '{ga12}', '{gametime}', '{competitionname}', '{gamename}' )">进入市场</button></div>
+		</div>
+		<!-- END BLOCK : MarketCPList_TableRow -->
+		</div>
+		<!-- END BLOCK : MarketCPList_Table -->
+	</div>
+	<!-- END BLOCK : MarketCPList -->

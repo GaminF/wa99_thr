@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1280">
+    <title>TG淘金网</title>
+    <link rel="stylesheet" href="interface/v2/css/reset.css">
+    <link rel="stylesheet" href="interface/v2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="interface/v2/css/font-awesome.min.css">
+    <link rel="stylesheet" href="interface/v2/css/mainStyle.css">
+    <script type="text/javascript" src="interface/v2/js/tgjs.js"></script> 
+</head>
+<script>
+var TodayStr = "{year}-{mon}-{mday} {hours}:{minutes}:{seconds}";
+</script>
+<body class="login_body">
+<div class="login_content_wrap ">
+    <div class="login_top ">
+        <div class="login_logo " onclick="javascript:location.href='./'"></div>
+        <div class="date" id="sysDateTime"></div>
+    </div>
+    <div class="number_line">
+        <div class="lang_select_wrap">
+
+            <div class="select_lang">
+                <div id="sample" class="dropdown">
+                    <dt><a href="#"><span><img class="flag" src="interface/v2/img/China-flag.png" alt=""/>简体中文</span></a></dt>
+                    <dd>
+                        <ul>
+                            <li><a href="#"><img class="flag" src="interface/v2/img/China-flag.png" alt="" />简体中文<span class="value">BR</span></a></li>
+                            <li><a href="#"><img class="flag" src="interface/v2/img/Hong-kong-flag.png" alt="" />繁體中文<span class="value">FR</span></a></li>
+                            <li><a href="#"><img class="flag" src="interface/v2/img/United-kingdom-flag.png" alt="" />English<span class="value">DE</span></a></li>
+                        </ul>
+                    </dd>
+                </div>
+            </div>
+        </div>
+        <div class="number_line_wrap">
+        <div class="number_wrap">
+            <div class="number_icon"></div>
+            <div>{onlineNum}</div>
+        </div>
+    </div>
+    </div>
+    <div class="login_navbar_wrap">
+	<!-- START BLOCK : menuInfoBar_notLogin -->
+    <div id="notlogin" class="login_navbar">
+        <div class="right_wrap">
+        <div class="account_wrap">
+            <div class="account_icon"></div>
+            <div><input type="text" placeholder="帐号" id="account" name="account"></div>
+        </div>
+        <div class="pwd_wrap">
+            <div class="lock_icon"></div>
+            <div><input type="password" placeholder="密码" id="pwd" name="pwd"></div>
+        </div>
+        <div class="login_btn_wrap">
+        <input type="hidden" name="login" id="login" value="{login}">
+            <button class="login_btn" id="login" onclick="ckLogin()">登入</button>
+			<button class="forgetPwd_btn" id="forgetPwd_btn" oonclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&configID=1586&jid=5625358570&s=1')">忘记密码</button>
+            <button class="register_btn" onclick="intoRegister('{agent}')">注册</button>
+        </div>
+        </div>
+    </div>
+	<!-- END BLOCK : menuInfoBar_notLogin -->
+	<!-- START BLOCK : menuInfoBar_Login -->
+    <div id="login" class="login_navbar">
+        <div>
+            <ul>
+                <li><a href="targetList.php">市场列表</a></li>
+                <li><a href="orders.php">交易明细</a></li>
+                <li><a href="history.php">历史帐务</a></li>
+                <li><a href="result.php">赛事结果</a></li>
+                <li><a href="notice.php">公&nbsp;&nbsp;&nbsp;告</a></li>
+            </ul>
+        </div>
+        <div class="right_wrap">
+        <div class="account_wrap">
+            <div class="account_icon"></div>
+            <div><input type="text" value="{username}" readonly></div>
+        </div>
+        <div class="money_wrap">
+            <div class="acc_icon"></div>
+            <div><input type="text" value="{quotaView}" readonly></div>
+        </div>
+        <div class="login_btn_wrap">
+            <a href="userCenter.php"><button class="member_btn">我&nbsp;&nbsp;&nbsp;&nbsp;的</button></a>
+            <a href="logout.php"><button class="logout_btn">登出</button></a>
+        </div>
+    </div>
+    </div>
+	<!-- END BLOCK : menuInfoBar_Login -->
+</div>
+
+
+    <div class="marquee_wrap">
+    <div class="marquee_icon"></div>
+    <div class="marquee_content_login">
+        <marquee>{marquee}</marquee>
+    </div>
+    </div>
+<!-- INCLUDE BLOCK : Content -->    
+ </div>  
+
+
+
+
+  <!-- INCLUDE BLOCK : Tips -->
+
+
+
+
+<div class="footer footer_login">
+    <div class="footer_container ">
+        <div class="footer_help">
+            <div class="footer_block">
+                <div>建议浏览器<br><span>RECOMMEMDED BROWSER</span></div>
+                <div class="footer_icon">
+                    <div class="chrome_icon" onclick="window.open('https://www.google.com.tw/chrome/browser/desktop/index.html')"></div>
+                    <div class="ie_icon" onclick="window.open('http://windows.microsoft.com/zh-cn/internet-explorer/download-ie/')"></div>
+                    <div class="ie_green_icon" onclick="window.open('http://se.360.cn/')"></div>
+                    <div class="qqllq_icon" onclick="window.open('http://browser.qq.com/')"></div>
+                </div>
+            </div>
+            <div class="footer_block">
+                <div class="login_line"></div></div>
+            <div class="footer_block">
+                <div>24H线上客服<br><span>24H ONLINE SERVICE</span></div>
+                <div class="footer_icon">
+                    <div class="service_QQ" id="service_QQ" onclick="icon('QQ')"></div>  <!--QQ 按這裡-->
+                    <div class="service_weixin" id="service_weixin" onclick="icon('WEI')"></div> <!--微信按這裡-->
+				<div class="service_online" onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&configID=1586&jid=5625358570&s=1')"></div>
+					<!--   1800712clOSE<div class="service_online" onclick="_MICHAT.floatClick();return false;"></div>-->
+                    <!--  onclick="window.open('https://v88.live800.com/live800/chatClient/chatbox.jsp?companyID=698946&configID=1586&jid=5625358570&s=1')" -->
+                </div>
+            </div>
+            <div class="footer_block">
+                <div class="login_line"></div></div>
+            <div class="footer_block">
+                <div class="footer_help_block">
+                    <a href="#"><div class="footer_icon">
+                        <div class="help_center"></div>
+                        <div class="help_text" onclick="javascript:location.href='helpcenter.php'">帮助中心</div>
+                    </div></a>
+                    <a href="tgContact.php"><div class="footer_icon">
+                        <div class="cooperate"></div>
+                        <div class="help_text" onclick="javascript:location.href='tgContact.php'">与我们合作</div>
+                    </div></a>
+                    <a href="statistics.php"><div class="footer_icon">
+                        <div class="game_result"></div>
+                        <div class="help_text" >历年赛事结果</div>
+                    </div></a>
+                </div>
+                <div class="footer_help_block">
+                    <a href="rule.php"><div class="footer_icon">
+                        <div class="rules"></div>
+                        <div class="help_text">规则说明</div>
+                    </div></a>
+                    <a href="http://f.tg333.net/" target="_blank"><div class="footer_icon">
+                        <div class="discuss"></div>
+                        <div class="help_text" onclick="window.open('http://f.tg333.net/')">讨论区</div>
+                    </div></a>
+                    <a href="relate.php"><div class="footer_icon">
+                        <div class="relate_web"></div>
+                        <div class="help_text">相关网站</div>
+                    </div></a>
+                    <a href="about.php"><div class="footer_icon">
+                        <div class="about_us"></div>
+                        <div class="help_text" >关于淘金网</div>
+                    </div></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_black_line"></div>
+        <div>
+            <div class="sup_logo"></div>
+            <div class="footer_text">&copy; burgundy corporate tower,sen gil puyat ave makati city +63 945 129 9918
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script>
+    function show_popup()
+    {
+        document.getElementById('Modal_pmode').style.display = 'block';
+    }
+
+    window.onload = show_popup;
+
+
+</script>
+
+<script src="interface/v2/js/jquery-3.2.1.min.js"></script>
+<script src="interface/v2/js/bootstrap.min.js"></script>
+<script src="https://use.fontawesome.com/d9858d11e6.js"></script>
+<script src="interface/v2/js/mainJs.js"></script>
+<script src="interface/v2/js/v2.js"></script>
+<script src="interface/v2/js/sysDateTime.js"></script>
+<!-- <script src="interface/v2/js/tgservice.js"></script> -->
+<script>runTime();</script>
+</body>
+</html>

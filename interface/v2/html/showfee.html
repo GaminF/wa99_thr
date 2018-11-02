@@ -1,0 +1,38 @@
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<link rel="stylesheet" href="interface/v2/css/soon.min.css">
+<link rel="stylesheet" href="interface/v2/css/countdown.css">
+<script src="interface/v2/js/countdown.js"></script>
+<script src="interface/v2/js/soon_test.js"></script>
+<style>
+.soon-slot-animate
+{
+width:60px ! important;
+height:60px ! important;
+margin-top:50px ! important;
+}
+.soon-slot-new
+{
+font-size:38px ! important;
+}
+.soon-slot-old
+{
+font-size:38px ! important;
+}
+</style>
+
+<input type="hidden" name="arthur" id="arthur" value={reached}>
+<input type="hidden" name="pickfee" id="pickfee" value="{reached}">
+<div class="countdown_block">
+  <div class="soon" id="my-soon-counter"
+               data-due="in 5 seconds"
+               data-layout="group overlap label-lowercase label-hidden"
+               data-format="s"
+               data-face="slot doctor glow"
+               data-visual="ring glow-progress width-thin offset-65 length-80">
+  </div>
+</div>
+

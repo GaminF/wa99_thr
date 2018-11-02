@@ -1,0 +1,217 @@
+html{
+	font-family: "SimHei", Microsoft YaHei, Gotham, Helvetica Neue, Helvetica, Arial, sans-serif;
+	background: url(../img/bg-1.jpg) center center no-repeat fixed;
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+}
+
+#wrapper{
+	position:relative;
+	margin:0;
+	padding:0;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+
+.main{
+		width:80%;
+		padding:20px;
+		margin:0 auto;
+		text-align:center;
+	}
+	
+	.logo{
+		margin:auto;
+		width:14%;
+		height:auto;
+		margin-top:5%;
+		margin-bottom:1.1em;
+	}
+	
+	.logo img{
+		width:100%;
+		height:auto;
+	}
+	
+	.main h1{
+		margin:auto;
+		width:50%;
+		font-size:2em;
+		line-height:1.5em;
+		font-weight: 900;
+		color:#926125;
+		margin-bottom:1em;
+	}
+	
+	.main p{
+		margin:auto;
+		width:50%;		
+		text-align:left;
+		font-size:1.25em;
+		line-height:1.5em;
+		color:#2b4e5f;
+		margin-bottom:1em;
+	}
+	
+	.contact{
+		cursor:pointer;
+		margin-top:3%;
+		outline:none;
+		-webkit-border-radius:50px;
+		-moz-border-radius:50px;
+		border-radius:50px;
+		border:2px solid #fff;
+		padding:1em 1.25em 1em 1.25em;
+		background: #26acf5; /* Old browsers */
+		background: -moz-linear-gradient(#26acf5 0%, #093c7b 70%);
+		background: -webkit-linear-gradient(#26acf5 0%, #093c7b 70%);
+		background: -webkit-gradient(linear, 0 0, 0 100%, from(#26acf5), color-stop(0.7, #093c7b));
+		background: -o-linear-gradient(#26acf5 0%, #093c7b 70%);
+		background: linear-gradient(#26acf5 0%, #093c7b 70%);
+		 /* FF3.6-15 */
+		 /* Chrome10-25,Safari5.1-6 */
+		 /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#26acf5', endColorstr='#093c7b',GradientType=0 ); /* IE6-9 */
+		box-shadow:0px 0px 5px rgba(0,0,0,0.75);
+		color:#fff;
+		font-size:1em;
+		font-family: "SimHei", Microsoft YaHei, Gotham, Helvetica Neue, Helvetica, Arial, sans-serif;
+	}
+	
+	.contact:hover{
+		background: #093c7b; /* Old browsers */
+		background: -moz-linear-gradient(#093c7b 30%, #26acf5 100%);
+		background: -webkit-linear-gradient(#093c7b 30%, #26acf5 100%);
+		background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.3, #093c7b), to(#26acf5));
+		background: -o-linear-gradient(#093c7b 30%, #26acf5 100%);
+		background: linear-gradient(#093c7b 30%, #26acf5 100%); /* FF3.6-15 */
+		 /* Chrome10-25,Safari5.1-6 */
+		 /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#093c7b', endColorstr='#26acf5',GradientType=0 ); /* IE6-9 */
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1280px){
+	.logo{
+		width:20%;
+	}
+	
+	.main h1{
+		width:100%;
+	}
+	
+	.main p{
+		width:60%;
+	}
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	.logo{
+		width:25%;
+	}
+	
+	.main h1{
+		width:100%;
+	}
+	
+	.main p{
+		width:75%;
+	}
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 800px){
+	.main{}
+	
+	.logo{
+		width:30%;
+	}
+	
+	.main h1{
+		width:100%;
+	}
+	
+	.main p{
+		width:100%;
+		text-align:left;
+	}
+}
+
+@media screen and (min-width: 481px) and (max-width: 568px){
+	
+	.main{
+		width:90%;
+	}
+	
+	.logo{
+		margin:auto;
+		width:30%;
+		height:auto;
+		margin-top:5%;
+		margin-bottom:1.1em;
+	}
+	
+	.main h1{
+		width:90%;
+		text-align:center;
+		font-size:1.5em;
+	}
+	
+	.main p{
+		width:90%;
+		text-align:left;
+	}
+	
+}
+
+
+@media screen and (min-width: 320px) and (max-width: 480px){
+
+	.main{
+		width:90%;
+		padding:20px;
+		margin:0 auto;
+		text-align:center;
+	}
+	
+	.logo{
+		margin:auto;
+		width:50%;
+		height:auto;
+		margin-top:5%;
+		margin-bottom:1.1em;
+	}
+	
+	.main h1{
+		width:90%;
+		text-align:left;
+		font-size:2em;
+		line-height:1.5em;
+		font-weight:bold;
+		color:#926125;
+		margin-bottom:1em;
+	}
+	
+	.main p{
+		width:90%;
+		text-align:left;
+		font-size:1.25em;
+		line-height:1.5em;
+		color:#2b4e5f;
+		margin-bottom:1em;
+	}
+	
+	.contact{
+		font-size:1em;
+
+	}
+
+}
